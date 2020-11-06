@@ -54,41 +54,7 @@ abstract class HtmlGeneratorBase
         $this->viewLabels = $this->getViewLabelsGenerator();
     }
 
-    public function getFilterRows(){
-        $htmlFields = '';
 
-        foreach ($this->fields as $field) {
-            $htmlFields .= '<div class="col-md-6">';
-            if (!$field->isOnFormView) {
-                continue;
-            }
-
-            $parser = new ValidationParser($field->validationRules);
-
-            if (in_array($field->htmlType, ['select', 'multipleSelect'])) {
-                $htmlFields .= $this->getSelectHtmlField($field, $parser);
-            } elseif (in_array($field->htmlType, ['radio', 'checkbox'])) {
-                $htmlFields .= $this->getPickItemsHtml($field, $parser);
-            } elseif ($field->htmlType == 'textarea') {
-                $htmlFields .= $this->getTextareaHtmlField($field, $parser);
-            } elseif ($field->htmlType == 'password') {
-                $htmlFields .= $this->getPasswordHtmlField($field, $parser);
-            } elseif ($field->htmlType == 'file') {
-                $htmlFields .= $this->getFileHtmlField($field);
-            } elseif ($field->htmlType == 'selectRange') {
-                $htmlFields .= $this->getSelectRangeHtmlField($field);
-            } elseif ($field->htmlType == 'selectMonth') {
-                $htmlFields .= $this->getSelectMonthHtmlField($field);
-            } else {
-                $htmlFields .= $this->getStandardHtmlField($field, $parser);
-            }
-            $htmlFields .= '</div>';
-        }
-
-        $this->replaceStandardLabels($htmlFields, $this->viewLabels->getLabels());
-
-        return $htmlFields;
-    }
 
     /**
      * Gets html field for the current set fields.
