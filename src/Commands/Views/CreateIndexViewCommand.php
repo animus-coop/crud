@@ -58,6 +58,7 @@ class CreateIndexViewCommand extends ViewsCommandBase
                 ->replacePrimaryKey($stub, $this->getPrimaryKeyName($resources->fields))
                 ->replaceHeaderCells($stub, $htmlCreator->getIndexHeaderCells())
                 ->replaceBodyCells($stub, $htmlCreator->getIndexBodyCells())
+                ->replaceFilterRows($stub,$htmlCreator->getFilterRows())
                 ->replaceModelHeader($stub, $this->getHeaderFieldAccessor($resources->fields, $input->modelName))
                 ->createFile($destenationFile, $stub)
                 ->info('Index view was crafted successfully.');
@@ -89,4 +90,18 @@ class CreateIndexViewCommand extends ViewsCommandBase
     {
         return $this->replaceTemplate('body_cells', $body, $stub);
     }
+
+    /**
+     * Replaces the form field's html code in a given stub.
+     *
+     * @param string $stub
+     * @param string $fields
+     *
+     * @return $this
+     */
+
+    protected function replaceFilterRows(&$stub,$fields){
+        return $this->replaceTemplate('filter_rows',$fields,$stub);
+    }
+
 }

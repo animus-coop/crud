@@ -17,6 +17,7 @@ class [% controller_name %] [% controller_extends %]
     {
         $[% model_name_plural_variable %] = [% model_name_class %]::[% with_relations_for_index %]paginate([% models_per_page %]);
 
+
         return view('[% index_view_name %]'[% view_variables_for_index %]);
     }
 
