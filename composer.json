@@ -1,5 +1,5 @@
 {
-    "name": "animus/crud",
+    "name": "animus/crud-generator",
     "license": "MIT",
     "description": "Just another admin generator with a pretty CMS design.",
     "version": "v2.4.4",
