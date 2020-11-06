@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AnimusCoop\\CrudGenerator\\CodeGeneratorServiceProvider"
+                "AnimusCoop\\CrudGenerator\\CrudGeneratorServiceProvider"
             ]
         }
     }

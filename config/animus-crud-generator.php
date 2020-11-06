@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | CodeGenerator config overrides
+    | CrudGenerator config overrides
     |--------------------------------------------------------------------------
     |
     | It is a good idea to sperate your configuration form the code-generator's

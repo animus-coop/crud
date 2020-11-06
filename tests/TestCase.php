@@ -14,7 +14,7 @@ class TestCase extends BaseTestCase
 {
     protected function getPackageProviders($app)
     {
-        return ['AnimusCoop\CrudGenerator\CodeGeneratorServiceProvider'];
+        return ['AnimusCoop\CrudGenerator\CrudGeneratorServiceProvider'];
     }
 
     /**

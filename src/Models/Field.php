@@ -1581,7 +1581,7 @@ class Field implements JsonWriter
     /**
      * Gets the true label for the boolean field.
      *
-     * @return mix(null | restApps\CodeGenerator\Models\Label)
+     * @return mix(null | restApps\CrudGenerator\Models\Label)
      */
     public function getTrueBooleanOption()
     {
@@ -1607,7 +1607,7 @@ class Field implements JsonWriter
     /**
      * Gets the false label for the boolean field.
      *
-     * @return mix(null | restApps\CodeGenerator\Models\Label)
+     * @return mix(null | restApps\CrudGenerator\Models\Label)
      */
     public function getFalseBooleanOption()
     {

@@ -165,7 +165,7 @@ class CreateModelCommand extends Command
     /**
      * Gets the correct primary key name.
      *
-     * @param CreatApps\CodeGenerator\Models\Field $primaryField
+     * @param CreatApps\CrudGenerator\Models\Field $primaryField
      * @param string $primaryKey
      *
      * @return string

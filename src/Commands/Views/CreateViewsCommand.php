@@ -63,7 +63,7 @@ class CreateViewsCommand extends ViewsCommandBase
     /**
      * It checks if a view file exists and the --force option is not present
      *
-     * @param CrestApp\CodeGenerator\Models\Resource $resource
+     * @param CrestApp\CrudGenerator\Models\Resource $resource
      *
      * @return bool
      */

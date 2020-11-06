@@ -6,7 +6,7 @@ use AnimusCoop\CrudGenerator\Support\Helpers;
 use File;
 use Illuminate\Support\ServiceProvider;
 
-class CodeGeneratorServiceProvider extends ServiceProvider
+class CrudGeneratorServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
