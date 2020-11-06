@@ -145,7 +145,7 @@ return [
     |--------------------------------------------------------------------------
     |
      */
-    'controllers_path' => 'Http/Controllers',
+    'controllers_path' => 'Http/Controllers/admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -440,16 +440,14 @@ return [
     |--------------------------------------------------------------------------
     |
      */
-    'plural_names_for' => [
-        'controller-name' => true,
-        'api-resource-name' => true,
-        'api-resource-collection-name' => true,
-        'request-form-name' => true,
+        'controller-name' => false,
+        'api-resource-name' => false,
+        'api-resource-collection-name' => false,
+        'request-form-name' => false,
         'route-group' => true,
         'language-file-name' => true,
         'resource-file-name' => true,
-        'table-name' => true,
-    ],
+        'table-name' => false,
 
     /*
     |--------------------------------------------------------------------------

@@ -6,7 +6,7 @@ use AnimusCoop\CrudGenerator\Support\Config;
 use AnimusCoop\CrudGenerator\Support\Helpers;
 use AnimusCoop\CrudGenerator\Support\Str;
 use AnimusCoop\CrudGenerator\Traits\CommonCommand;
-use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\GeneratorR68eplacers;
 use AnimusCoop\CrudGenerator\Traits\RouteTrait;
 use Exception;
 use Illuminate\Console\Command;
@@ -65,7 +65,7 @@ class CreateRoutesCommand extends Command
         $controllnerName = $this->getControllerName($input->controllerName, $input->controllerDirectory);
 
         $this->replaceModelName($stub, $input->modelName)
-            ->replaceControllerName($stub, $controllnerName)
+            ->replaceControllerName($stub, 'App\Http\Controllers\admin\\' . $controllnerName)
             ->replaceRouteNames($stub, $this->getModelName($input->modelName), $namePrefix)
             ->processRoutesGroup($stub, $input)
             ->replaceRouteIdClause($stub, $this->getRouteIdClause($input->withoutRouteClause))

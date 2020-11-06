@@ -242,7 +242,7 @@ class CreateModelCommand extends Command
      */
     protected function getModelExtends($namespace)
     {
-        $class = Str::extractClassFromString($namespace);
+        $class = ucfirst(Str::extractClassFromString($namespace));
         if (!empty($class)) {
             return sprintf('extends %s', $class);
         }
@@ -358,7 +358,7 @@ class CreateModelCommand extends Command
      */
     protected function getCommandInput()
     {
-        $modelName = trim($this->argument('model-name'));
+        $modelName = Str::camel(trim($this->argument('model-name')));
         $table = trim($this->option('table-name')) ?: Helpers::makeTableName($modelName);
         $primaryKey = trim($this->option('primary-key'));
         $useSoftDelete = $this->option('with-soft-delete');
