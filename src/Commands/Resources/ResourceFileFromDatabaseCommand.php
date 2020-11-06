@@ -18,7 +18,6 @@ use AnimusCoop\CrudGenerator\Traits\Migration;
 use DB;
 use Exception;
 use File;
-use AnimusCoop\CrudGenerator\Support\Str;
 
 class ResourceFileFromDatabaseCommand extends ResourceFileCommandBase
 {
