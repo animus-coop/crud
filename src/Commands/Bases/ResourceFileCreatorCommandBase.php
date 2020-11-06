@@ -33,7 +33,7 @@ class ResourceFileCreatorCommandBase extends ResourceFileCommandBase
      */
     protected function getCommandInput()
     {
-        $modelName = trim($this->argument('model-name'));
+        $modelName = ucfirst(\AnimusCoop\CrudGenerator\Support\Str::camel(trim($this->argument('model-name'))));
         $filename = trim($this->option('resource-filename'));
         $file = $filename ? Str::finish($filename, '.json') : Helpers::makeJsonFileName($modelName);
         $translationFor = array_unique(Arr::fromString($this->option('translation-for')));

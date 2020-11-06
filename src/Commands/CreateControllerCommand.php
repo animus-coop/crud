@@ -358,7 +358,7 @@ class CreateControllerCommand extends ControllerCommandBase
      */
     protected function getCommandInput()
     {
-        $modelName = trim($this->argument('model-name'));
+        $modelName = ucfirst(\AnimusCoop\CrudGenerator\Support\Str::camel(trim($this->argument('model-name'))));
         $cName = trim($this->option('controller-name'));
         $controllerName = $cName ? str_finish($cName, Config::getControllerNamePostFix()) : Helpers::makeControllerName($modelName);
         $viewDirectory = $this->option('views-directory');

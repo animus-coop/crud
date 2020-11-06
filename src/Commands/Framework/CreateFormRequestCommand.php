@@ -211,7 +211,7 @@ class CreateFormRequestCommand extends ControllerRequestCommandBase
      */
     protected function getCommandInput()
     {
-        $modelName = trim($this->argument('model-name'));
+        $modelName = ucfirst(\AnimusCoop\CrudGenerator\Support\Str::camel(trim($this->argument('model-name'))));
         $fileName = trim($this->option('class-name')) ?: Helpers::makeFormRequestName($modelName);
         $resourceFile = trim($this->option('resource-file')) ?: Helpers::makeJsonFileName($modelName);
         $prefix = ($this->option('routes-prefix') == 'default-form') ? Helpers::makeRouteGroup($modelName) : $this->option('routes-prefix');

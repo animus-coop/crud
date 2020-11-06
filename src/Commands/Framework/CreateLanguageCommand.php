@@ -248,7 +248,7 @@ class CreateLanguageCommand extends Command
      */
     protected function getCommandInput()
     {
-        $modelName = trim($this->argument('model-name'));
+        $modelName = ucfirst(\AnimusCoop\CrudGenerator\Support\Str::camel(trim($this->argument('model-name'))));
         $fileName = trim($this->option('language-filename')) ?: self::makeLocaleGroup($modelName);
         $resourceFile = trim($this->option('resource-file')) ?: Helpers::makeJsonFileName($modelName);
         $template = trim($this->option('template-name'));

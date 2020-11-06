@@ -71,7 +71,7 @@ class CreateRoutesCommand extends Command
      */
     protected function getCommandInput()
     {
-        $modelName = trim($this->argument('model-name'));
+        $modelName = ucfirst(\AnimusCoop\CrudGenerator\Support\Str::camel(trim($this->argument('model-name'))));
         $controllerName = trim($this->option('controller-name')) ?: Helpers::postFixWith($modelName, 'Controller');
         $prefix = ($this->option('routes-prefix') == 'default-form') ? Helpers::makeRouteGroup($modelName) : $this->option('routes-prefix');
         $prefix = str_replace('\\', '/', $prefix);

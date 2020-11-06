@@ -171,7 +171,7 @@ class CreateApiResourceCommand extends Command
      */
     protected function getCommandInput()
     {
-        $modelName = trim($this->argument('model-name'));
+        $modelName = ucfirst(\AnimusCoop\CrudGenerator\Support\Str::camel(trim($this->argument('model-name'))));
         $resourceFile = trim($this->option('resource-file')) ?: Helpers::makeJsonFileName($modelName);
         $template = $this->getTemplateName();
         $isCollection = $this->option('collection');
