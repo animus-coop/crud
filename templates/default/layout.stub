@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', '[% application_name %]') }}</title>
+        <title>Animus CMS</title>
 
     <!-- Le styles -->
     <link href="{{ asset('cms/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css') }}" rel="stylesheet" />
@@ -71,7 +71,7 @@
                     <ul class="nav navbar-nav hidden-xs">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                {{ "now"|date("d/m/Y H:i", "America/Argentina/Buenos_Aires") }}
+                                {{ date('l') }} {{ date('d') }}
                             </a>
                         </li>
                     </ul>
@@ -99,7 +99,7 @@
                     <a href="#" class="rounded-image profile-image"><img src="{{ asset('cms/images/users/user-100.jpg') }}"></a>
                 </div>
                 <div class="col-xs-8">
-                    <div class="profile-text">Bienvenido <b>{{ app.user.firstName }}</b></div>
+                    <div class="profile-text">Bienvenido <b>{Logged user}</b></div>
                     <div class="profile-buttons">
                         <a href="/admin/logout" title="Sign Out"><i class="fa fa-power-off text-red-1"></i></a>
                     </div>
@@ -131,7 +131,7 @@
             @yield('content')
             <!-- Footer Start -->
             <footer>
-                Animus &copy; {{ "now"|date("Y") }}.
+                Animus &copy; {{ date("Y") }}.
             </footer>
             <!-- Footer End -->
         </div>
