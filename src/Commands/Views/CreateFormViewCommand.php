@@ -4,6 +4,7 @@ namespace AnimusCoop\CrudGenerator\Commands\Views;
 
 use AnimusCoop\CrudGenerator\Commands\Bases\ViewsCommandBase;
 use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
 
 class CreateFormViewCommand extends ViewsCommandBase
 {
@@ -55,6 +56,8 @@ class CreateFormViewCommand extends ViewsCommandBase
             $htmlCreator = $this->getHtmlGenerator($resources->fields, $input->modelName, $this->getTemplateName());
             $headers = $this->getHeaderFieldAccessor($resources->fields, $input->modelName);
 
+            $this->createBaseLayout();
+
             $this->createLanguageFile($input->languageFileName, $input->resourceFile, $input->modelName)
                 ->replaceCommonTemplates($stub, $input, $resources->fields)
                 ->replaceFields($stub, $htmlCreator->getHtmlFields())
@@ -62,6 +65,14 @@ class CreateFormViewCommand extends ViewsCommandBase
                 ->createFile($destenationFile, $stub)
                 ->info('Form view was crafted successfully.');
         }
+    }
+
+    protected function createBaseLayout() {
+        $destenationFile = Config::getViewsPath() . 'layouts/app.blade.php';
+        $stub = $this->getStubContent('layout', $this->getTemplateName());
+
+        $this->createFile($destenationFile, $stub)
+            ->info('Base layout created.');
     }
 
     /**
