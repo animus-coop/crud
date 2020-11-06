@@ -33,7 +33,7 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         ], 'default-collective-template');
 
         $this->publishes([
-            $dir . '/assets' => $this->codeGeneratorBase('cms'),
+            __DIR__.'/assets' => public_path('cms'),
         ], 'public');
     }
 
