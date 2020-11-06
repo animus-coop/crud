@@ -1,10 +1,10 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands;
+namespace AnimusCoop\CrudGenerator\Commands;
 
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
 use Exception;
 use Illuminate\Console\Command;
 use Route;

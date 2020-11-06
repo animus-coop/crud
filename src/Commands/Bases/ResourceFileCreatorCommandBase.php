@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Bases;
+namespace AnimusCoop\CrudGenerator\Commands\Bases;
 
-use Animus\CodeGenerator\Commands\Bases\ResourceFileCommandBase;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Commands\Bases\ResourceFileCommandBase;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 
 class ResourceFileCreatorCommandBase extends ResourceFileCommandBase
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Models\FieldMigrationChange;
-use Animus\CodeGenerator\Models\IndexMigrationChange;
-use Animus\CodeGenerator\Models\MigrationCapsule;
-use Animus\CodeGenerator\Models\MigrationChangeCapsule;
-use Animus\CodeGenerator\Models\MigrationInput;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
-use Animus\CodeGenerator\Support\MigrationHistoryTracker;
+use AnimusCoop\CrudGenerator\Models\FieldMigrationChange;
+use AnimusCoop\CrudGenerator\Models\IndexMigrationChange;
+use AnimusCoop\CrudGenerator\Models\MigrationCapsule;
+use AnimusCoop\CrudGenerator\Models\MigrationChangeCapsule;
+use AnimusCoop\CrudGenerator\Models\MigrationInput;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Support\MigrationHistoryTracker;
 use File;
 
 class MigrationTrackerCapsule implements JsonWriter
@@ -95,11 +95,11 @@ class MigrationTrackerCapsule implements JsonWriter
      * Get the difference between a givin resource and the
      * resource in the current migration
      *
-     * @param Animus\CodeGenerator\Models\Resource $resourceA
-     * @param Animus\CodeGenerator\Models\Resource $resourceB
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resourceA
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resourceB
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
      *
-     * @return Animus\CodeGenerator\Models\MigrationChangeCapsule
+     * @return AnimusCoop\CrudGenerator\Models\MigrationChangeCapsule
      */
     public function getDelta(Resource $resourceA, Resource $resourceB, MigrationInput $input)
     {
@@ -225,7 +225,7 @@ class MigrationTrackerCapsule implements JsonWriter
     /**
      * Update the last migration
      *
-     * @param Animus\CodeGenerator\Models\MigrationCapsule $migration
+     * @param AnimusCoop\CrudGenerator\Models\MigrationCapsule $migration
      *
      * @return void
      */
@@ -314,7 +314,7 @@ class MigrationTrackerCapsule implements JsonWriter
     /**
      * Gets the last migration in the collection which is the one we are using
      *
-     * @return mix (null || Animus\CodeGenerator\Models\MigrationCapsule)
+     * @return mix (null || AnimusCoop\CrudGenerator\Models\MigrationCapsule)
      */
     public function getCurrentMigration()
     {
@@ -337,7 +337,7 @@ class MigrationTrackerCapsule implements JsonWriter
      * Gets the last before current migration in the
      * collection which is the one we are using
      *
-     * @return mix (null || Animus\CodeGenerator\Models\MigrationCapsule)
+     * @return mix (null || AnimusCoop\CrudGenerator\Models\MigrationCapsule)
      */
     public function getMigrationBeforeCurrent()
     {
@@ -445,7 +445,7 @@ class MigrationTrackerCapsule implements JsonWriter
      * @param string $resourceFile
      * @param array $migrationProperties
      *
-     * @return Animus\CodeGenerator\Models\MigrationTrackerCapsule
+     * @return AnimusCoop\CrudGenerator\Models\MigrationTrackerCapsule
      */
     public static function get($tableName, $modelName, $resourceFile, array $migrationProperties = [])
     {

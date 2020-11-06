@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Traits;
+namespace AnimusCoop\CrudGenerator\Traits;
 
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 
 trait ApiDocViewsTrait
 {

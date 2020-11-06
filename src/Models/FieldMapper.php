@@ -1,15 +1,15 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\Field;
 
 class FieldMapper
 {
     /**
      * The field to optimize
      *
-     * @var array of Animus\CodeGenerator\Models\Field
+     * @var array of AnimusCoop\CrudGenerator\Models\Field
      */
     public $field;
 
@@ -23,7 +23,7 @@ class FieldMapper
     /**
      * Creates a new field instance.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param array $meta
      *
      * @return void

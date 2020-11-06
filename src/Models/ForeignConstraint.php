@@ -1,12 +1,12 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\ModelTrait;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\ModelTrait;
 
 class ForeignConstraint implements JsonWriter
 {
@@ -111,7 +111,7 @@ class ForeignConstraint implements JsonWriter
     /**
      * Get a foreign relation.
      *
-     * @return Animus\CodeGenerator\Models\ForeignRelatioship
+     * @return AnimusCoop\CrudGenerator\Models\ForeignRelatioship
      */
     public function getForeignRelation()
     {
@@ -188,7 +188,7 @@ class ForeignConstraint implements JsonWriter
      * @param array $properties
      * @param string $fieldName
      *
-     * @return null || Animus\CodeGenerator\Models\ForeignConstraint
+     * @return null || AnimusCoop\CrudGenerator\Models\ForeignConstraint
      */
     public static function fromArray(array $constraint, $fieldName)
     {

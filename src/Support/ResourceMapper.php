@@ -1,13 +1,13 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 use Exception;
 use File;
 use Illuminate\Console\Command;
-use Animus\CodeGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
 
 class ResourceMapper
 {
@@ -146,7 +146,7 @@ class ResourceMapper
     /**
      * Gets the resources
      *
-     * @return Animus\CodeGenerator\Models\Resource
+     * @return AnimusCoop\CrudGenerator\Models\Resource
      */
     protected function getResources()
     {

@@ -1,24 +1,24 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Resources;
+namespace AnimusCoop\CrudGenerator\Commands\Resources;
 
-use Animus\CodeGenerator\Commands\Bases\ResourceFileCommandBase;
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\MigrationCapsule;
-use Animus\CodeGenerator\Models\MigrationTrackerCapsule;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\MigrationHistoryTracker;
-use Animus\CodeGenerator\Support\ResourceMapper;
-use Animus\CodeGenerator\Traits\LanguageTrait;
-use Animus\CodeGenerator\Traits\Migration;
+use AnimusCoop\CrudGenerator\Commands\Bases\ResourceFileCommandBase;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\MigrationCapsule;
+use AnimusCoop\CrudGenerator\Models\MigrationTrackerCapsule;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\MigrationHistoryTracker;
+use AnimusCoop\CrudGenerator\Support\ResourceMapper;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Traits\Migration;
 use DB;
 use Exception;
 use File;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 class ResourceFileFromDatabaseCommand extends ResourceFileCommandBase
 {
@@ -101,7 +101,7 @@ class ResourceFileFromDatabaseCommand extends ResourceFileCommandBase
     /**
      * Creates a virtual migration in the migration tracker
      *
-     * @param Animus\CodeGenerator\Models\Resource $resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $destenationFile
      * @param string $tableName
      *
@@ -134,7 +134,7 @@ class ResourceFileFromDatabaseCommand extends ResourceFileCommandBase
             throw new Exception('The database driver user is not supported!');
         }
 
-        $class = sprintf('Animus\CodeGenerator\DatabaseParsers\%sParser', ucfirst($driver));
+        $class = sprintf('AnimusCoop\CrudGenerator\DatabaseParsers\%sParser', ucfirst($driver));
 
         return new $class($this->getTableName(), $this->getDatabaseName(), $this->getLanguages());
     }
@@ -222,10 +222,10 @@ class ResourceFileFromDatabaseCommand extends ResourceFileCommandBase
     /**
      * Make a migration capsule
      *
-     * @param Animus\CodeGenerator\Models\Resource $resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $tableName
      *
-     * @return Animus\CodeGenerator\Models\MigrationCapsule
+     * @return AnimusCoop\CrudGenerator\Models\MigrationCapsule
      */
     protected function getMigrationCapsule($resource, $tableName)
     {

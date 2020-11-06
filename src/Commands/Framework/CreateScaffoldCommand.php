@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Framework;
+namespace AnimusCoop\CrudGenerator\Commands\Framework;
 
-use Animus\CodeGenerator\Commands\Bases\CreateScaffoldCommandBase;
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Models\ScaffoldInput;
+use AnimusCoop\CrudGenerator\Commands\Bases\CreateScaffoldCommandBase;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Models\ScaffoldInput;
 
 class CreateScaffoldCommand extends CreateScaffoldCommandBase
 {
@@ -83,7 +83,7 @@ class CreateScaffoldCommand extends CreateScaffoldCommandBase
     /**
      * Executes the command that generates all the views.
      *
-     * @param Animus\CodeGenerator\Models\ScaffoldInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ScaffoldInput $input
      *
      * @return $this
      */
@@ -110,7 +110,7 @@ class CreateScaffoldCommand extends CreateScaffoldCommandBase
     /**
      * Executes the command that generates the controller.
      *
-     * @param Animus\CodeGenerator\Models\ScaffoldInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ScaffoldInput $input
      * @return $this
      */
     protected function createController(ScaffoldInput $input)
@@ -145,8 +145,8 @@ class CreateScaffoldCommand extends CreateScaffoldCommandBase
     /**
      * Executes the command that generates the routes.
      *
-     * @param Animus\CodeGenerator\Models\ScaffoldInput $input
-     * @param Animus\CodeGenerator\Models\Field $primaryField
+     * @param AnimusCoop\CrudGenerator\Models\ScaffoldInput $input
+     * @param AnimusCoop\CrudGenerator\Models\Field $primaryField
      *
      * @return $this
      */
@@ -172,7 +172,7 @@ class CreateScaffoldCommand extends CreateScaffoldCommandBase
     /**
      * Gets a clean user inputs.
      *
-     * @return Animus\CodeGenerator\Models\ScaffoldInput
+     * @return AnimusCoop\CrudGenerator\Models\ScaffoldInput
      */
     protected function getCommandInput()
     {

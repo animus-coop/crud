@@ -6,7 +6,7 @@
  * Time: 5:31 AM
  */
 
-namespace Animus\CodeGenerator\Tests;
+namespace AnimusCoop\CrudGenerator\Tests;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Artisan;

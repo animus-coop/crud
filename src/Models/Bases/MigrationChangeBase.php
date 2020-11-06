@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Models\Bases;
+namespace AnimusCoop\CrudGenerator\Models\Bases;
 
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
 
 class MigrationChangeBase
 {

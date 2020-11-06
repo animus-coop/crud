@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\ValidationParser;
-use Animus\CodeGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\ValidationParser;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
 
 class FieldOptimizer
 {
@@ -14,7 +14,7 @@ class FieldOptimizer
     /**
      * The field to optimize
      *
-     * @var Animus\CodeGenerator\Models\Field
+     * @var AnimusCoop\CrudGenerator\Models\Field
      */
     protected $field;
 
@@ -35,7 +35,7 @@ class FieldOptimizer
     /**
      * Create a new optemizer instance.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param array $meta
      *
      * @return void
@@ -50,7 +50,7 @@ class FieldOptimizer
     /**
      * Gets the optimized field.
      *
-     * @return Animus\CodeGenerator\Models\Field
+     * @return AnimusCoop\CrudGenerator\Models\Field
      */
     public function getField()
     {
@@ -202,7 +202,7 @@ class FieldOptimizer
      * Ensure, the datatype is set to be valid otherwise make it "int".
      * It also make sure the primary column does not appears on the views unless it specified
      *
-     * @param Animus\CodeGenerator\Models\Field $this->field
+     * @param AnimusCoop\CrudGenerator\Models\Field $this->field
      *
      * @return $this
      */

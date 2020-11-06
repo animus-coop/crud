@@ -1,10 +1,10 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Views;
+namespace AnimusCoop\CrudGenerator\Commands\Views;
 
-use Animus\CodeGenerator\Commands\Bases\ViewsCommandBase;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Commands\Bases\ViewsCommandBase;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 class CreateEditViewCommand extends ViewsCommandBase
 {

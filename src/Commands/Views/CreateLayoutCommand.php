@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Views;
+namespace AnimusCoop\CrudGenerator\Commands\Views;
 
-use Animus\CodeGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
 use Illuminate\Console\Command;
 
 class CreateLayoutCommand extends Command

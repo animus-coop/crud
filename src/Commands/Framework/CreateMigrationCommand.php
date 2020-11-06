@@ -1,22 +1,22 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Framework;
+namespace AnimusCoop\CrudGenerator\Commands\Framework;
 
-use Animus\CodeGenerator\Commands\Bases\MigrationCommandBase;
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\ForeignConstraint;
-use Animus\CodeGenerator\Models\Label;
-use Animus\CodeGenerator\Models\MigrationCapsule;
-use Animus\CodeGenerator\Models\MigrationChangeCapsule;
-use Animus\CodeGenerator\Models\MigrationInput;
-use Animus\CodeGenerator\Models\MigrationTrackerCapsule;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\MigrationHistoryTracker;
-use Animus\CodeGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Commands\Bases\MigrationCommandBase;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\ForeignConstraint;
+use AnimusCoop\CrudGenerator\Models\Label;
+use AnimusCoop\CrudGenerator\Models\MigrationCapsule;
+use AnimusCoop\CrudGenerator\Models\MigrationChangeCapsule;
+use AnimusCoop\CrudGenerator\Models\MigrationInput;
+use AnimusCoop\CrudGenerator\Models\MigrationTrackerCapsule;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\MigrationHistoryTracker;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
 use Exception;
 use File;
 
@@ -148,7 +148,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      *
      * @throws Exception
      *
-     * @return Animus\CodeGenerator\Models\Resource
+     * @return AnimusCoop\CrudGenerator\Models\Resource
      */
     protected function getCurrentResource($resourceFile)
     {
@@ -164,9 +164,9 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Gets a new migration capsule
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
      *
-     * @return Animus\CodeGenerator\Models\MigrationTrackerCapsule
+     * @return AnimusCoop\CrudGenerator\Models\MigrationTrackerCapsule
      */
     protected function getMigrationTrackerCapsule(MigrationInput $input)
     {
@@ -176,12 +176,12 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Make a migration capsule
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
-     * @param Animus\CodeGenerator\Models\Resource $resource
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $name
      * @param bool $isCreate
      *
-     * @return Animus\CodeGenerator\Models\MigrationCapsule
+     * @return AnimusCoop\CrudGenerator\Models\MigrationCapsule
      */
     protected function getMigrationCapsule(MigrationInput $input, $resource, $name, $isCreate = true)
     {
@@ -218,8 +218,8 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Make a create migration
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
-     * @param Animus\CodeGenerator\Models\MigrationCapsule $migration
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\MigrationCapsule $migration
      *
      * @return void
      */
@@ -239,9 +239,9 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Make an alter migration
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
-     * @param Animus\CodeGenerator\Models\MigrationCapsule $migration
-     * @param Animus\CodeGenerator\Models\MigrationChangeCapsule $changeCapsule
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\MigrationCapsule $migration
+     * @param AnimusCoop\CrudGenerator\Models\MigrationChangeCapsule $changeCapsule
      *
      * @return void
      */
@@ -261,8 +261,8 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Creates the table properties.
      *
-     * @param Animus\CodeGenerator\Models\Resource $resource
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resource
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
      *
      * @return string
      */
@@ -286,8 +286,8 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Gets a list of all column that are used in the given migration
      *
-     * @param Animus\CodeGenerator\Models\Resource $resource
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resource
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
      *
      * @return string
      */
@@ -331,9 +331,9 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Gets Foreign contstrains from given fields.
      *
-     * @param array of Animus\CodeGenerator\Models\Field $field
+     * @param array of AnimusCoop\CrudGenerator\Models\Field $field
      *
-     * @return array of Animus\CodeGenerator\Models\ForeignConstraint $field
+     * @return array of AnimusCoop\CrudGenerator\Models\ForeignConstraint $field
      */
     protected function getConstraintsFromfields(array $fields)
     {
@@ -352,7 +352,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds 'foreign' eloquent method to a given properties.
      *
      * @param string $properties
-     * @param Animus\CodeGenerator\Models\ForeignConstraint $constraint
+     * @param AnimusCoop\CrudGenerator\Models\ForeignConstraint $constraint
      *
      * @return $this
      */
@@ -367,7 +367,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds 'references' eloquent method to a given properties.
      *
      * @param string $properties
-     * @param Animus\CodeGenerator\Models\ForeignConstraint $constraint
+     * @param AnimusCoop\CrudGenerator\Models\ForeignConstraint $constraint
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds 'on' eloquent method to a given properties.
      *
      * @param string $properties
-     * @param Animus\CodeGenerator\Models\ForeignConstraint $constraint
+     * @param AnimusCoop\CrudGenerator\Models\ForeignConstraint $constraint
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds 'onDelete' eloquent method to a given properties.
      *
      * @param string $properties
-     * @param Animus\CodeGenerator\Models\ForeignConstraint $constraint
+     * @param AnimusCoop\CrudGenerator\Models\ForeignConstraint $constraint
      *
      * @return $this
      */
@@ -414,7 +414,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds 'onUpdate' eloquent method to a given properties.
      *
      * @param string $properties
-     * @param Animus\CodeGenerator\Models\ForeignConstraint $constraint
+     * @param AnimusCoop\CrudGenerator\Models\ForeignConstraint $constraint
      *
      * @return $this
      */
@@ -542,7 +542,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds a 'field type' to the property
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */
@@ -557,7 +557,7 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Constructs the second parameter to the type method
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return string
      */
@@ -575,7 +575,7 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Constructs the second parameter to the enum type method
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return string
      */
@@ -647,7 +647,7 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Constructs the schema down command.
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
      *
      * @return string
      */
@@ -664,8 +664,8 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Creates the table properties.
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
-     * @param Animus\CodeGenerator\Models\MigrationChangeCapsule $changeCapsule
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\MigrationChangeCapsule $changeCapsule
      *
      * @return string
      */
@@ -744,8 +744,8 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Get the schema down blueprint for alter command.
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
-     * @param Animus\CodeGenerator\Models\MigrationChangeCapsule $changeCapsule
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\MigrationChangeCapsule $changeCapsule
      *
      * @return string
      */
@@ -831,7 +831,7 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Constructs the schema down command.
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
      * @param string $blueprintBody
      *
      * @return string
@@ -851,7 +851,7 @@ class CreateMigrationCommand extends MigrationCommandBase
     /**
      * Constructs the schema up command.
      *
-     * @param Animus\CodeGenerator\Models\MigrationInput $input
+     * @param AnimusCoop\CrudGenerator\Models\MigrationInput $input
      *
      * @return string
      */
@@ -938,7 +938,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds the field's "default" value to the given property.
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */
@@ -955,7 +955,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds the field's "unsigned" value to the given property.
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */
@@ -1007,7 +1007,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds the field's "unique" value to the given property.
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */
@@ -1024,7 +1024,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds the field's "index" value to the given property.
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */
@@ -1041,7 +1041,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds an index
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Index $index
+     * @param AnimusCoop\CrudGenerator\Models\Index $index
      *
      * @return $this
      */
@@ -1056,7 +1056,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * drop an index
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Index $index
+     * @param AnimusCoop\CrudGenerator\Models\Index $index
      *
      * @return $this
      */
@@ -1071,7 +1071,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds the field's "nullable" value to the given property.
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */
@@ -1088,7 +1088,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds the field's "comment" value to the given property.
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */
@@ -1123,7 +1123,7 @@ class CreateMigrationCommand extends MigrationCommandBase
      * Adds the table's "primary column" to the given property.
      *
      * @param string $property
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */

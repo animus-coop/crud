@@ -1,6 +1,6 @@
 <?php
 
-namespace Animus\CodeGenerator\Support\Contracts;
+namespace AnimusCoop\CrudGenerator\Support\Contracts;
 
 interface ChangeDetector
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Tests;
+namespace AnimusCoop\CrudGenerator\Tests;
 
-use Animus\CodeGenerator\Tests\TestCase;
-use Animus\CodeGenerator\Models\ForeignRelationship;
+use AnimusCoop\CrudGenerator\Tests\TestCase;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationship;
 
 class ForeignRelationTest extends TestCase
 {

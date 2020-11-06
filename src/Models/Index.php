@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
 use Exception;
 
 class Index implements JsonWriter
@@ -224,7 +224,7 @@ class Index implements JsonWriter
     /**
      * Gets an index from an array.
      *
-     * @var Animus\CodeGenerator\Models\Index
+     * @var AnimusCoop\CrudGenerator\Models\Index
      */
     public static function get(array $properties)
     {
@@ -252,7 +252,7 @@ class Index implements JsonWriter
     /**
      * Gets an index from a raw string.
      *
-     * @var Animus\CodeGenerator\Models\Index
+     * @var AnimusCoop\CrudGenerator\Models\Index
      */
     public static function fromString($rawIndex)
     {

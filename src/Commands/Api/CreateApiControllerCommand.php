@@ -1,14 +1,14 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Api;
+namespace AnimusCoop\CrudGenerator\Commands\Api;
 
-use Animus\CodeGenerator\Commands\Bases\ControllerCommandBase;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
-use Animus\CodeGenerator\Traits\ApiResourceTrait;
+use AnimusCoop\CrudGenerator\Commands\Bases\ControllerCommandBase;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\Traits\ApiResourceTrait;
 
 class CreateApiControllerCommand extends ControllerCommandBase
 {
@@ -411,7 +411,7 @@ class CreateApiControllerCommand extends ControllerCommandBase
     /**
      * Executes the command that generates a migration.
      *
-     * @param Animus\CodeGenerator\Models\ScaffoldInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ScaffoldInput $input
      *
      * @return $this
      */

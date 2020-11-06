@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Migrations;
+namespace AnimusCoop\CrudGenerator\Commands\Migrations;
 
-use Animus\CodeGenerator\Commands\Bases\MigrationCommandBase;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Commands\Bases\MigrationCommandBase;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Database\Migrations\Migrator;
 

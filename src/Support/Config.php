@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
 use Config as LaravelConfig;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 use Exception;
 use Illuminate\Config\Repository;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
 use Illuminate\Translation\Translator;
 use Illuminate\Support\Arr;
@@ -26,7 +26,7 @@ class AnimusTranslator extends Translator
     /**
     * Adds a new instance of animus_translator to the IoC container,
     *
-    * @return Animus\CodeGenerator\Support\AnimusTranslator
+    * @return AnimusCoop\CrudGenerator\Support\AnimusTranslator
     */
     public static function getTranslator()
     {

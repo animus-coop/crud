@@ -1,17 +1,17 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Bases;
+namespace AnimusCoop\CrudGenerator\Commands\Bases;
 
-use Animus\CodeGenerator\Commands\Bases\ControllerRequestCommandBase;
-use Animus\CodeGenerator\Models\ForeignRelationship;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
-use Animus\CodeGenerator\Traits\LanguageTrait;
-use Animus\CodeGenerator\Traits\ModelTrait;
+use AnimusCoop\CrudGenerator\Commands\Bases\ControllerRequestCommandBase;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationship;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Traits\ModelTrait;
 
 abstract class ControllerCommandBase extends ControllerRequestCommandBase
 {
@@ -48,7 +48,7 @@ abstract class ControllerCommandBase extends ControllerRequestCommandBase
     /**
      * Build the model class with the given name.
      *
-     * @param  Animus\CodeGenerator\Models\Resource $resource
+     * @param  AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $destenationFile
      *
      * @return bool
@@ -440,7 +440,7 @@ abstract class ControllerCommandBase extends ControllerRequestCommandBase
     /**
      * Gets the relation accessor for the given foreign renationship.
      *
-     * @param Animus\CodeGenerator\Models\ForeignRelationship $collection
+     * @param AnimusCoop\CrudGenerator\Models\ForeignRelationship $collection
      *
      * @return string
      */
@@ -651,7 +651,7 @@ abstract class ControllerCommandBase extends ControllerRequestCommandBase
     /**
      * Calls the create:form-request command
      *
-     * @param  Animus\CodeGenerator\Models\ViewInput $input
+     * @param  AnimusCoop\CrudGenerator\Models\ViewInput $input
      *
      * @return $this
      */
@@ -906,7 +906,7 @@ abstract class ControllerCommandBase extends ControllerRequestCommandBase
      * Processes common tasks
      *
      * @param object $input
-     * @param Animus\CodeGenerator\Models\Resource $resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $stub
      *
      * @return $this

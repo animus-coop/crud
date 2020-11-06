@@ -1,18 +1,18 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
 use App;
-use Animus\CodeGenerator\Models\ForeignRelationhip;
-use Animus\CodeGenerator\Models\Label;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
-use Animus\CodeGenerator\Traits\ModelTrait;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationhip;
+use AnimusCoop\CrudGenerator\Models\Label;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\ModelTrait;
 use Exception;
 
 class Field implements JsonWriter
@@ -321,14 +321,14 @@ class Field implements JsonWriter
     /**
      * The foreign relations
      *
-     * @var Animus\CodeGenerator\Models\ForeignRelationhip
+     * @var AnimusCoop\CrudGenerator\Models\ForeignRelationhip
      */
     private $foreignRelation;
 
     /**
      * The foreign Constraint.
      *
-     * @var Animus\CodeGenerator\Models\ForeignConstraint
+     * @var AnimusCoop\CrudGenerator\Models\ForeignConstraint
      */
     private $foreignConstraint;
 
@@ -441,7 +441,7 @@ class Field implements JsonWriter
      *
      * @param string $lang
      *
-     * @return Animus\CodeGenerator\Models\Label
+     * @return AnimusCoop\CrudGenerator\Models\Label
      */
     public function getLabel($lang = null)
     {
@@ -459,7 +459,7 @@ class Field implements JsonWriter
      *
      * @param string $lang
      *
-     * @return Animus\CodeGenerator\Models\Label
+     * @return AnimusCoop\CrudGenerator\Models\Label
      */
     public function getPlaceholder($lang = null)
     {
@@ -485,7 +485,7 @@ class Field implements JsonWriter
     /**
      * Gets the first available label if any.
      *
-     * @return Animus\CodeGenerator\Models\Label
+     * @return AnimusCoop\CrudGenerator\Models\Label
      */
     public function getFirstLabel()
     {
@@ -495,7 +495,7 @@ class Field implements JsonWriter
     /**
      * Gets the first available placeholder if any.
      *
-     * @return Animus\CodeGenerator\Models\Label | null
+     * @return AnimusCoop\CrudGenerator\Models\Label | null
      */
     public function getFirstPlaceholder()
     {
@@ -583,7 +583,7 @@ class Field implements JsonWriter
     /**
      * Sets the foreign relationship of the field.
      *
-     * @param Animus\CodeGenerator\Models\ForeignRelationship $relation
+     * @param AnimusCoop\CrudGenerator\Models\ForeignRelationship $relation
      *
      * @return void
      */
@@ -632,7 +632,7 @@ class Field implements JsonWriter
     /**
      * Sets the foreign key of the field.
      *
-     * @param Animus\CodeGenerator\Models\ForeignConstraint $foreignConstraint
+     * @param AnimusCoop\CrudGenerator\Models\ForeignConstraint $foreignConstraint
      *
      * @return void
      */
@@ -644,7 +644,7 @@ class Field implements JsonWriter
     /**
      * It set the placeholder property for a given field
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param array $properties
      *
      * @return $this
@@ -715,7 +715,7 @@ class Field implements JsonWriter
     /**
      * Gets the field's foreign relationship.
      *
-     * @return Animus\CodeGenerator\Models\ForeignRelationhip
+     * @return AnimusCoop\CrudGenerator\Models\ForeignRelationhip
      */
     public function getForeignRelation()
     {
@@ -725,7 +725,7 @@ class Field implements JsonWriter
     /**
      * Gets the field's foreign key.
      *
-     * @return Animus\CodeGenerator\Models\ForeignConstraint
+     * @return AnimusCoop\CrudGenerator\Models\ForeignConstraint
      */
     public function getForeignConstraint()
     {
@@ -1407,7 +1407,7 @@ class Field implements JsonWriter
      *
      * @param array $properties
      *
-     * @return null || Animus\CodeGenerator\Models\ForeignConstraint
+     * @return null || AnimusCoop\CrudGenerator\Models\ForeignConstraint
      */
     protected function getForeignConstraintFromArray(array $properties)
     {

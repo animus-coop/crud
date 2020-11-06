@@ -1,18 +1,18 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Framework;
+namespace AnimusCoop\CrudGenerator\Commands\Framework;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\ForeignRelationship;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\FieldTransformer;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
-use Animus\CodeGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationship;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\FieldTransformer;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
 use Illuminate\Console\Command;
 
 class CreateModelCommand extends Command
@@ -106,7 +106,7 @@ class CreateModelCommand extends Command
     /**
      * Checks for basic errors
      *
-     * @param  Animus\CodeGenerator\Models\Resource $resource
+     * @param  AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $destenationFile
      *
      * @return bool
@@ -549,7 +549,7 @@ class CreateModelCommand extends Command
     /**
      * Gets accessor for a given field.
      *
-     * @param  Animus\CodeGenerator\Models\Field  $field
+     * @param  AnimusCoop\CrudGenerator\Models\Field  $field
      * @param  string $content
      * @return string
      */
@@ -566,7 +566,7 @@ class CreateModelCommand extends Command
     /**
      * Gets mutator for a given field.
      *
-     * @param  Animus\CodeGenerator\Models\Field  $field
+     * @param  AnimusCoop\CrudGenerator\Models\Field  $field
      * @param  string $content
      *
      * @return string
@@ -584,7 +584,7 @@ class CreateModelCommand extends Command
     /**
      * Creates the code for a relationship.
      *
-     * @param Animus\CodeGenerator\Models\ForeignRelation $relation
+     * @param AnimusCoop\CrudGenerator\Models\ForeignRelation $relation
      *
      * @return string
      */
@@ -603,7 +603,7 @@ class CreateModelCommand extends Command
     /**
      * Gets the return type for the given relationship
      *
-     * @param Animus\CodeGenerator\Models\ForeignRelation $relation
+     * @param AnimusCoop\CrudGenerator\Models\ForeignRelation $relation
      *
      * @return string
      */

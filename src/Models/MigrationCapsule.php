@@ -1,12 +1,12 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Contracts\ChangeDetector;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
-use Animus\CodeGenerator\Traits\Migration;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Contracts\ChangeDetector;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Traits\Migration;
 use Exception;
 
 class MigrationCapsule implements JsonWriter, ChangeDetector
@@ -73,7 +73,7 @@ class MigrationCapsule implements JsonWriter, ChangeDetector
     /**
      * The resources associated with the migration
      *
-     * @var Animus\CodeGenerator\Models\Resource
+     * @var AnimusCoop\CrudGenerator\Models\Resource
      */
     public $resource;
 
@@ -187,7 +187,7 @@ class MigrationCapsule implements JsonWriter, ChangeDetector
      *
      * @param string $name
      *
-     * @return Animus\CodeGenerator\Models\MigrationCapsule
+     * @return AnimusCoop\CrudGenerator\Models\MigrationCapsule
      */
     public static function get($name)
     {

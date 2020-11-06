@@ -1,14 +1,14 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands;
+namespace AnimusCoop\CrudGenerator\Commands;
 
 use App;
-use Animus\CodeGenerator\Commands\Bases\ControllerCommandBase;
-use Animus\CodeGenerator\Models\ForeignRelationship;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\Commands\Bases\ControllerCommandBase;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationship;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
 
 class CreateControllerCommand extends ControllerCommandBase
 {
@@ -156,7 +156,7 @@ class CreateControllerCommand extends ControllerCommandBase
     /**
      * Build the model class with the given name.
      *
-     * @param  Animus\CodeGenerator\Models\Resource $resource
+     * @param  AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $destenationFile
      *
      * @return bool
@@ -601,7 +601,7 @@ class CreateControllerCommand extends ControllerCommandBase
     /**
      * Gets the relation accessor for the given foreign renationship.
      *
-     * @param Animus\CodeGenerator\Models\ForeignRelationship $collection
+     * @param AnimusCoop\CrudGenerator\Models\ForeignRelationship $collection
      *
      * @return string
      */
@@ -810,7 +810,7 @@ class CreateControllerCommand extends ControllerCommandBase
     /**
      * Calls the create:form-request command
      *
-     * @param  Animus\CodeGenerator\Models\ViewInput $input
+     * @param  AnimusCoop\CrudGenerator\Models\ViewInput $input
      *
      * @return $this
      */

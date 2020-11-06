@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Migrations;
+namespace AnimusCoop\CrudGenerator\Commands\Migrations;
 
-use Animus\CodeGenerator\Commands\Bases\MigrationCommandBase;
+use AnimusCoop\CrudGenerator\Commands\Bases\MigrationCommandBase;
 use Illuminate\Database\Migrations\Migrator;
 use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputOption;

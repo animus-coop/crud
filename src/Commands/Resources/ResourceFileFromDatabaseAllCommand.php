@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Animus\CodeGenerator\Commands\Resources;
+namespace AnimusCoop\CrudGenerator\Commands\Resources;
 
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\ResourceMapper;
-use Animus\CodeGenerator\Traits\LanguageTrait;
-use Animus\CodeGenerator\Traits\Migration;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\ResourceMapper;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Traits\Migration;
 use DB;
 
 class ResourceFileFromDatabaseAllCommand extends ResourceFileFromDatabaseCommand
@@ -70,7 +70,7 @@ class ResourceFileFromDatabaseAllCommand extends ResourceFileFromDatabaseCommand
             throw new \Exception("The database driver [$driver] is not supported!");
         }
 
-        $class = sprintf('Animus\CodeGenerator\DatabaseParsers\%sParser', ucfirst($driver));
+        $class = sprintf('AnimusCoop\CrudGenerator\DatabaseParsers\%sParser', ucfirst($driver));
 
         return new $class($this->table, $this->getDatabaseName(), $this->getLanguages());
     }

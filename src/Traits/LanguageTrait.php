@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Traits;
+namespace AnimusCoop\CrudGenerator\Traits;
 
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 trait LanguageTrait
 {

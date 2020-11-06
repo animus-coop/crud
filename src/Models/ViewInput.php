@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
 
 class ViewInput
 {

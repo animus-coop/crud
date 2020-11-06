@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Framework;
+namespace AnimusCoop\CrudGenerator\Commands\Framework;
 
-use Animus\CodeGenerator\Commands\Bases\ControllerCommandBase;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Commands\Bases\ControllerCommandBase;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 
 class CreateControllerCommand extends ControllerCommandBase
 {

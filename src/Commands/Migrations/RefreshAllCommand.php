@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Migrations;
+namespace AnimusCoop\CrudGenerator\Commands\Migrations;
 
-use Animus\CodeGenerator\Commands\Bases\MigrationCommandBase;
+use AnimusCoop\CrudGenerator\Commands\Bases\MigrationCommandBase;
 use Illuminate\Console\ConfirmableTrait;
 use Symfony\Component\Console\Input\InputOption;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Bases;
+namespace AnimusCoop\CrudGenerator\Commands\Bases;
 
-use Animus\CodeGenerator\Models\Bases\ScaffoldInputBase;
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\ScaffoldTrait;
+use AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\ScaffoldTrait;
 use Exception;
 use Illuminate\Console\Command;
 
@@ -17,7 +17,7 @@ class CreateScaffoldCommandBase extends Command
     /**
      * Runs any logic before scaffolding
      *
-     * @param Animus\CodeGenerator\Models\Bases\ScaffoldInputBase $input
+     * @param AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase $input
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class CreateScaffoldCommandBase extends Command
     /**
      * Executes the command that generates a migration.
      *
-     * @param Animus\CodeGenerator\Models\Bases\ScaffoldInputBase $input
+     * @param AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase $input
      *
      * @return $this
      */
@@ -81,7 +81,7 @@ class CreateScaffoldCommandBase extends Command
     /**
      * Executes the command that generate fields' file.
      *
-     * @param Animus\CodeGenerator\Models\Bases\ScaffoldInputBase $input
+     * @param AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase $input
      *
      * @return $this
      */
@@ -105,7 +105,7 @@ class CreateScaffoldCommandBase extends Command
     /**
      * Executes the command that generate fields' file.
      *
-     * @param Animus\CodeGenerator\Models\Bases\ScaffoldInputBase $input
+     * @param AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase $input
      *
      * @return $this
      */
@@ -128,7 +128,7 @@ class CreateScaffoldCommandBase extends Command
     /**
      * Executes the command that generates a language files.
      *
-     * @param Animus\CodeGenerator\Models\Bases\ScaffoldInputBase $input
+     * @param AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase $input
      *
      * @return $this
      */
@@ -153,7 +153,7 @@ class CreateScaffoldCommandBase extends Command
     /**
      * Executes the command that generates a model.
      *
-     * @param Animus\CodeGenerator\Models\Bases\ScaffoldInputBase $input
+     * @param AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase $input
      *
      * @return $this
      */
@@ -183,7 +183,7 @@ class CreateScaffoldCommandBase extends Command
     /**
      * Gets a clean user inputs.
      *
-     * @return Animus\CodeGenerator\Models\ScaffoldInputBase
+     * @return AnimusCoop\CrudGenerator\Models\ScaffoldInputBase
      */
     protected function getCommandInput()
     {

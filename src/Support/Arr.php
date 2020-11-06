@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Str;
 use Illuminate\Support\Arr as LaravelArr;
 
 class Arr extends LaravelArr

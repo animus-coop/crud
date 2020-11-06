@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Tests;
+namespace AnimusCoop\CrudGenerator\Tests;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Support\FieldTransformer;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Support\FieldTransformer;
 
 class FieldTest extends TestCase
 {

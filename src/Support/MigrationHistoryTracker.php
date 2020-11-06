@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
-use Animus\CodeGenerator\Models\MigrationCapsule;
-use Animus\CodeGenerator\Models\MigrationTrackerCapsule;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\Migration;
+use AnimusCoop\CrudGenerator\Models\MigrationCapsule;
+use AnimusCoop\CrudGenerator\Models\MigrationTrackerCapsule;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\Migration;
 use File;
 
 class MigrationHistoryTracker
@@ -67,7 +67,7 @@ class MigrationHistoryTracker
     /**
      * Gets a migration capsule from the file if any
      *
-     * @return mix (null || Animus\CodeGenerator\Models\MigrationTrackerCapsule)
+     * @return mix (null || AnimusCoop\CrudGenerator\Models\MigrationTrackerCapsule)
      */
     public function get($tableName)
     {
@@ -123,8 +123,8 @@ class MigrationHistoryTracker
     /**
      * Adds properties to the migration tracker
      *
-     * @param Animus\CodeGenerator\Models\MigrationTrackerCapsule
-     * @param Animus\CodeGenerator\Models\MigrationCapsule $migration
+     * @param AnimusCoop\CrudGenerator\Models\MigrationTrackerCapsule
+     * @param AnimusCoop\CrudGenerator\Models\MigrationCapsule $migration
      *
      * @return array
      */

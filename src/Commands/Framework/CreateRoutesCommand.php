@@ -1,13 +1,13 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Framework;
+namespace AnimusCoop\CrudGenerator\Commands\Framework;
 
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
-use Animus\CodeGenerator\Traits\RouteTrait;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\RouteTrait;
 use Exception;
 use Illuminate\Console\Command;
 use Route;

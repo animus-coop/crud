@@ -1,13 +1,13 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Resources;
+namespace AnimusCoop\CrudGenerator\Commands\Resources;
 
-use Animus\CodeGenerator\Commands\Bases\ResourceFileCreatorCommandBase;
-use Animus\CodeGenerator\Models\ForeignRelationship;
-use Animus\CodeGenerator\Models\Index;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\FieldTransformer;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Commands\Bases\ResourceFileCreatorCommandBase;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationship;
+use AnimusCoop\CrudGenerator\Models\Index;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\FieldTransformer;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 
 class ResourceFileAppendCommand extends ResourceFileCreatorCommandBase
 {
@@ -82,7 +82,7 @@ class ResourceFileAppendCommand extends ResourceFileCreatorCommandBase
     /**
      * Merges the given file's content to the new fields.
      *
-     * @param Animus\CodeGenerator\Models\Resource &$resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource &$resource
      * @param (object) $input
      *
      * @return int
@@ -109,7 +109,7 @@ class ResourceFileAppendCommand extends ResourceFileCreatorCommandBase
     /**
      * Merges the relation to the existing resources.
      *
-     * @param Animus\CodeGenerator\Models\Resource &$resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource &$resource
      * @param (object) $input
      *
      * @return int
@@ -145,7 +145,7 @@ class ResourceFileAppendCommand extends ResourceFileCreatorCommandBase
     /**
      * Merges the indexes to the existing resources.
      *
-     * @param Animus\CodeGenerator\Models\Resource &$resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource &$resource
      * @param (object) $input
      *
      * @return int

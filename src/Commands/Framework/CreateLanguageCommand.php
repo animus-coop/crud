@@ -1,15 +1,15 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Framework;
+namespace AnimusCoop\CrudGenerator\Commands\Framework;
 
-use Animus\CodeGenerator\Models\Label;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\AnimusTranslator;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Models\Label;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\AnimusTranslator;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
 use Exception;
 use Illuminate\Console\Command;
 
@@ -68,7 +68,7 @@ class CreateLanguageCommand extends Command
     /**
      * Gets the destenation file.
      *
-     * @param Animus\CodeGenerator\Models\Resource $resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $modelName
      *
      * @return array
@@ -142,7 +142,7 @@ class CreateLanguageCommand extends Command
     /**
      * Gets a singleton instance of a translator based ont he current framework's version.
      *
-     * @return Animus\CodeGenerator\Support\AnimusTranslator | Illuminate\Translation\Translator
+     * @return AnimusCoop\CrudGenerator\Support\AnimusTranslator | Illuminate\Translation\Translator
      */
     protected function getTranslator()
     {
@@ -289,7 +289,7 @@ class CreateLanguageCommand extends Command
     /**
      * Get file ready message.
      *
-     * @param Animus\CodeGenerator\Models\Label
+     * @param AnimusCoop\CrudGenerator\Models\Label
      *
      * @return string
      */

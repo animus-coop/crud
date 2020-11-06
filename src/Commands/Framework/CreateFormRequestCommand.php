@@ -1,12 +1,12 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Framework;
+namespace AnimusCoop\CrudGenerator\Commands\Framework;
 
-use Animus\CodeGenerator\Commands\Bases\ControllerRequestCommandBase;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Commands\Bases\ControllerRequestCommandBase;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 class CreateFormRequestCommand extends ControllerRequestCommandBase
 {
@@ -70,7 +70,7 @@ class CreateFormRequestCommand extends ControllerRequestCommandBase
     /**
      * Build the model class with the given name.
      *
-     * @param  Animus\CodeGenerator\Models\Resource $resource
+     * @param  AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $destenationFile
      *
      * @return bool

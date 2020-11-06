@@ -1,15 +1,15 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\FieldMapper;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\FieldsOptimizer;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
-use Animus\CodeGenerator\Traits\LabelTransformerTrait;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\FieldMapper;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\FieldsOptimizer;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\LabelTransformerTrait;
 use Exception;
 
 class FieldTransformer

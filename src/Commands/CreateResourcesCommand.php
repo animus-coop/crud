@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands;
+namespace AnimusCoop\CrudGenerator\Commands;
 
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Models\ResourceInput;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Models\ResourceInput;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
 use Exception;
 use Illuminate\Console\Command;
 
@@ -131,7 +131,7 @@ class CreateResourcesCommand extends Command
     /**
      * Executes the command that generates a migration.
      *
-     * @param Animus\CodeGenerator\Models\ResourceInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ResourceInput $input
      *
      * @return $this
      */
@@ -161,7 +161,7 @@ class CreateResourcesCommand extends Command
     /**
      * Executes the command that generate fields' file.
      *
-     * @param Animus\CodeGenerator\Models\ResourceInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ResourceInput $input
      *
      * @return $this
      */
@@ -185,7 +185,7 @@ class CreateResourcesCommand extends Command
     /**
      * Executes the command that generates a language files.
      *
-     * @param Animus\CodeGenerator\Models\ResourceInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ResourceInput $input
      *
      * @return $this
      */
@@ -210,7 +210,7 @@ class CreateResourcesCommand extends Command
     /**
      * Executes the command that generates all the views.
      *
-     * @param Animus\CodeGenerator\Models\ResourceInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ResourceInput $input
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class CreateResourcesCommand extends Command
     /**
      * Executes the command that generates the routes.
      *
-     * @param Animus\CodeGenerator\Models\ResourceInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ResourceInput $input
      *
      * @return $this
      */
@@ -260,7 +260,7 @@ class CreateResourcesCommand extends Command
     /**
      * Executes the command that generates the controller.
      *
-     * @param Animus\CodeGenerator\Models\ResourceInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ResourceInput $input
      * @return $this
      */
     protected function createController($input)
@@ -295,7 +295,7 @@ class CreateResourcesCommand extends Command
     /**
      * Executes the command that generates a model.
      *
-     * @param Animus\CodeGenerator\Models\ResourceInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ResourceInput $input
      *
      * @return $this
      */
@@ -324,7 +324,7 @@ class CreateResourcesCommand extends Command
     /**
      * Gets a clean user inputs.
      *
-     * @return Animus\CodeGenerator\Models\ResourceInput
+     * @return AnimusCoop\CrudGenerator\Models\ResourceInput
      */
     protected function getCommandInput()
     {

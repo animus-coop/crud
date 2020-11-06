@@ -1,10 +1,8 @@
 <?php
-
-namespace Animus\CodeGenerator\Traits;
-
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
+namespace AnimusCoop\CrudGenerator\Traits;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 trait ApiResourceTrait
 {

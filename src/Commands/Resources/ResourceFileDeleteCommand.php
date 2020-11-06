@@ -1,12 +1,12 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Resources;
+namespace AnimusCoop\CrudGenerator\Commands\Resources;
 
-use Animus\CodeGenerator\Commands\Bases\ResourceFileCommandBase;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\ResourceMapper;
+use AnimusCoop\CrudGenerator\Commands\Bases\ResourceFileCommandBase;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\ResourceMapper;
 
 class ResourceFileDeleteCommand extends ResourceFileCommandBase
 {

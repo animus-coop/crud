@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Traits;
+namespace AnimusCoop\CrudGenerator\Traits;
 
 use App;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Str;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 

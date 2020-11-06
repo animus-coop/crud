@@ -1,12 +1,12 @@
 <?php
-namespace Animus\CodeGenerator\HtmlGenerators;
+namespace AnimusCoop\CrudGenerator\HtmlGenerators;
 
-use Animus\CodeGenerator\HtmlGenerators\HtmlGeneratorBase;
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\Label;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\HtmlGenerators\HtmlGeneratorBase;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\Label;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 class LaravelCollectiveHtml extends HtmlGeneratorBase
 {
@@ -73,7 +73,7 @@ class LaravelCollectiveHtml extends HtmlGeneratorBase
     /**
      * Get the placeholder attribute.
      *
-     * @param Animus\CodeGenerator\Models\Label $placeholder
+     * @param AnimusCoop\CrudGenerator\Models\Label $placeholder
      *
      * @return string
      */
@@ -85,7 +85,7 @@ class LaravelCollectiveHtml extends HtmlGeneratorBase
     /**
      * Get the placeholder attribute for a menu.
      *
-     * @param Animus\CodeGenerator\Models\Label $placeholder
+     * @param AnimusCoop\CrudGenerator\Models\Label $placeholder
      * @param string $name
      *
      * @return string
@@ -110,7 +110,7 @@ class LaravelCollectiveHtml extends HtmlGeneratorBase
     /**
      * It gets converts an array to a string based array for the views.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return string
      */
@@ -126,7 +126,7 @@ class LaravelCollectiveHtml extends HtmlGeneratorBase
     /**
      * Gets a plain title from a given label.
      *
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      * @param bool $raw
      *
      * @return string
@@ -292,7 +292,7 @@ class LaravelCollectiveHtml extends HtmlGeneratorBase
     /**
      * Gets an instance of ViewLabelsGenerator
      *
-     * @return Animus\CodeGenerator\Support\ViewLabelsGenerator
+     * @return AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator
      */
     protected function getViewLabelsGenerator()
     {

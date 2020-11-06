@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Support\Contracts\ChangeDetector;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Support\Contracts\ChangeDetector;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
 
 class MigrationChangeCapsule implements JsonWriter, ChangeDetector
 {

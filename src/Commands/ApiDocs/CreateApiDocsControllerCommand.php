@@ -1,14 +1,14 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\ApiDocs;
+namespace AnimusCoop\CrudGenerator\Commands\ApiDocs;
 
-use Animus\CodeGenerator\Commands\Bases\ControllerCommandBase;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\ApiDocViewsTrait;
-use Animus\CodeGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Commands\Bases\ControllerCommandBase;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\ApiDocViewsTrait;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
 
 class CreateApiDocsControllerCommand extends ControllerCommandBase
 {

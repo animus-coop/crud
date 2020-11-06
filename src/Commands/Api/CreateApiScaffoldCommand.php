@@ -1,15 +1,15 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Api;
+namespace AnimusCoop\CrudGenerator\Commands\Api;
 
-use Animus\CodeGenerator\Commands\Bases\CreateScaffoldCommandBase;
-use Animus\CodeGenerator\Models\ApiScaffoldInput;
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\ScaffoldTrait;
+use AnimusCoop\CrudGenerator\Commands\Bases\CreateScaffoldCommandBase;
+use AnimusCoop\CrudGenerator\Models\ApiScaffoldInput;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\ScaffoldTrait;
 
 class CreateApiScaffoldCommand extends CreateScaffoldCommandBase
 {
@@ -96,7 +96,7 @@ class CreateApiScaffoldCommand extends CreateScaffoldCommandBase
     /**
      * Executes the command that generates the controller.
      *
-     * @param Animus\CodeGenerator\Models\ApiScaffoldInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ApiScaffoldInput $input
      * @return $this
      */
     protected function createController(ApiScaffoldInput $input)
@@ -136,7 +136,7 @@ class CreateApiScaffoldCommand extends CreateScaffoldCommandBase
     /**
      * Executes the command that generates the documentation
      *
-     * @param Animus\CodeGenerator\Models\ApiScaffoldInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ApiScaffoldInput $input
      * @return $this
      */
     protected function createDocs(ApiScaffoldInput $input)
@@ -165,8 +165,8 @@ class CreateApiScaffoldCommand extends CreateScaffoldCommandBase
     /**
      * Executes the command that generates the routes.
      *
-     * @param Animus\CodeGenerator\Models\ApiScaffoldInput $input
-     * @param Animus\CodeGenerator\Models\Field $primaryField
+     * @param AnimusCoop\CrudGenerator\Models\ApiScaffoldInput $input
+     * @param AnimusCoop\CrudGenerator\Models\Field $primaryField
      * @param bool $forApi
      *
      * @return $this
@@ -216,7 +216,7 @@ class CreateApiScaffoldCommand extends CreateScaffoldCommandBase
     /**
      * Gets a clean user inputs.
      *
-     * @return Animus\CodeGenerator\Models\ApiScaffoldInput
+     * @return AnimusCoop\CrudGenerator\Models\ApiScaffoldInput
      */
     protected function getCommandInput()
     {

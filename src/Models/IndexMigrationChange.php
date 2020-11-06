@@ -1,17 +1,17 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Models\Bases\MigrationChangeBase;
-use Animus\CodeGenerator\Support\Contracts\ChangeDetector;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Models\Bases\MigrationChangeBase;
+use AnimusCoop\CrudGenerator\Support\Contracts\ChangeDetector;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
 
 class IndexMigrationChange extends MigrationChangeBase implements JsonWriter, ChangeDetector
 {
     /**
      * The field to be deleted or added
      *
-     * @var Animus\CodeGenerator\Models\Index
+     * @var AnimusCoop\CrudGenerator\Models\Index
      */
     public $index;
 
@@ -43,9 +43,9 @@ class IndexMigrationChange extends MigrationChangeBase implements JsonWriter, Ch
     /**
      * Get new migration change from the given index
      *
-     * @param Animus\CodeGenerator\Models\Index $index
+     * @param AnimusCoop\CrudGenerator\Models\Index $index
      *
-     * @return Animus\CodeGenerator\Models\IndexMigrationChange
+     * @return AnimusCoop\CrudGenerator\Models\IndexMigrationChange
      */
     public static function getAdded(Index $index)
     {
@@ -59,9 +59,9 @@ class IndexMigrationChange extends MigrationChangeBase implements JsonWriter, Ch
     /**
      * Get new migration change from the given index
      *
-     * @param Animus\CodeGenerator\Models\Index $index
+     * @param AnimusCoop\CrudGenerator\Models\Index $index
      *
-     * @return Animus\CodeGenerator\Models\IndexMigrationChange
+     * @return AnimusCoop\CrudGenerator\Models\IndexMigrationChange
      */
     public static function getDeleted(Index $index)
     {
@@ -75,10 +75,10 @@ class IndexMigrationChange extends MigrationChangeBase implements JsonWriter, Ch
     /**
      * Get the migration change after comparing two given fields
      *
-     * @param Animus\CodeGenerator\Models\Field $fieldA
-     * @param Animus\CodeGenerator\Models\Field $fieldB
+     * @param AnimusCoop\CrudGenerator\Models\Field $fieldA
+     * @param AnimusCoop\CrudGenerator\Models\Field $fieldB
      *
-     * @return Animus\CodeGenerator\Models\FieldMigrationChange
+     * @return AnimusCoop\CrudGenerator\Models\FieldMigrationChange
      */
     public static function compare(Field $fieldA, Field $fieldB)
     {

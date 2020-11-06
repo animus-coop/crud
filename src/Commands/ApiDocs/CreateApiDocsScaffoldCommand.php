@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\ApiDocs;
+namespace AnimusCoop\CrudGenerator\Commands\ApiDocs;
 
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\ApiDocViewsTrait;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\ScaffoldTrait;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\ApiDocViewsTrait;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\ScaffoldTrait;
 use Illuminate\Console\Command;
 
 class CreateApiDocsScaffoldCommand extends command

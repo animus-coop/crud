@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Bases;
+namespace AnimusCoop\CrudGenerator\Commands\Bases;
 
-use Animus\CodeGenerator\Traits\Migration;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\Migration;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 use Illuminate\Console\Command;
 
 class MigrationCommandBase extends Command

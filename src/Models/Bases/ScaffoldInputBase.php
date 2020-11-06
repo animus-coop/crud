@@ -1,6 +1,6 @@
 <?php
 
-namespace Animus\CodeGenerator\Models\Bases;
+namespace AnimusCoop\CrudGenerator\Models\Bases;
 
 class ScaffoldInputBase
 {

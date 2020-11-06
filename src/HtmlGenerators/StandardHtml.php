@@ -1,13 +1,13 @@
 <?php
 
-namespace Animus\CodeGenerator\HtmlGenerators;
+namespace AnimusCoop\CrudGenerator\HtmlGenerators;
 
-use Animus\CodeGenerator\HtmlGenerators\HtmlGeneratorBase;
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\Label;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\HtmlGenerators\HtmlGeneratorBase;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\Label;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
 
 class StandardHtml extends HtmlGeneratorBase
 {
@@ -74,7 +74,7 @@ class StandardHtml extends HtmlGeneratorBase
     /**
      * Get the placeholder attribute.
      *
-     * @param Animus\CodeGenerator\Models\Label $placeholder
+     * @param AnimusCoop\CrudGenerator\Models\Label $placeholder
      *
      * @return string
      */
@@ -90,7 +90,7 @@ class StandardHtml extends HtmlGeneratorBase
     /**
      * Get the placeholder attribute for a menu.
      *
-     * @param Animus\CodeGenerator\Models\Label $placeholder
+     * @param AnimusCoop\CrudGenerator\Models\Label $placeholder
      * @param string $name
      *
      * @return string
@@ -119,7 +119,7 @@ class StandardHtml extends HtmlGeneratorBase
     /**
      * It gets converts an array to a stringbase array for the views.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return string
      */
@@ -137,7 +137,7 @@ class StandardHtml extends HtmlGeneratorBase
     /**
      * Gets a plain title from a given label.
      *
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      * @param bool $raw
      *
      * @return string
@@ -298,7 +298,7 @@ class StandardHtml extends HtmlGeneratorBase
      * Creates html label.
      *
      * @param string $name
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      *
      * @return string
      */
@@ -327,7 +327,7 @@ class StandardHtml extends HtmlGeneratorBase
     /**
      * Gets an instance of ViewLabelsGenerator
      *
-     * @return Animus\CodeGenerator\Support\ViewLabelsGenerator
+     * @return AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator
      */
     protected function getViewLabelsGenerator()
     {

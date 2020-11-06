@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Models\Bases\ScaffoldInputBase;
+use AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase;
 
 class ScaffoldInput extends ScaffoldInputBase
 {
@@ -23,7 +23,7 @@ class ScaffoldInput extends ScaffoldInputBase
     /**
      * Creates a new class instance.
      *
-     * @param Animus\CodeGenerator\Models\Bases\ScaffoldInputBase $model
+     * @param AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase $model
      *
      * @return void
      */

@@ -1,10 +1,10 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
 use App;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Str;
 use File;
 use Illuminate\Container\Container;
 

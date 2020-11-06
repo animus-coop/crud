@@ -1,10 +1,10 @@
 <?php
-namespace Animus\CodeGenerator\DatabaseParser;
+namespace AnimusCoop\CrudGenerator\DatabaseParser;
 
 use App;
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\FieldOptimizer;
-use Animus\CodeGenerator\Support\DatabaseParser\ParserBase;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\FieldOptimizer;
+use AnimusCoop\CrudGenerator\Support\DatabaseParser\ParserBase;
 use DB;
 use Exception;
 
@@ -135,7 +135,7 @@ class SqlServerParser extends ParserBase
     /**
      * Set the unsiged flag for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $type
      *
      * @return $this
@@ -153,7 +153,7 @@ class SqlServerParser extends ParserBase
     /**
      * Set the html type for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $type
      *
      * @return $this
@@ -172,7 +172,7 @@ class SqlServerParser extends ParserBase
     /**
      * Set the data type for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $type
      *
      * @return $this
@@ -191,7 +191,7 @@ class SqlServerParser extends ParserBase
     /**
      * Set the nullable for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $nullable
      *
      * @return $this
@@ -206,7 +206,7 @@ class SqlServerParser extends ParserBase
     /**
      * Set the max length for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $length
      *
      * @return $this
@@ -224,7 +224,7 @@ class SqlServerParser extends ParserBase
     /**
      * Set the default value for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $default
      *
      * @return $this
@@ -241,7 +241,7 @@ class SqlServerParser extends ParserBase
     /**
      * Set the labels for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $name
      *
      * @return $this
@@ -256,7 +256,7 @@ class SqlServerParser extends ParserBase
     /**
      * Set the keys for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $key
      * @param string $extra
      *

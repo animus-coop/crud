@@ -1,20 +1,20 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\ApiDocs;
+namespace AnimusCoop\CrudGenerator\Commands\ApiDocs;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\Label;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
-use Animus\CodeGenerator\Traits\ApiDocViewsTrait;
-use Animus\CodeGenerator\Traits\ApiResourceTrait;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
-use Animus\CodeGenerator\Traits\LanguageTrait;
-use Animus\CodeGenerator\Traits\RouteTrait;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\Label;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\Traits\ApiDocViewsTrait;
+use AnimusCoop\CrudGenerator\Traits\ApiResourceTrait;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Traits\RouteTrait;
 use Illuminate\Console\Command;
 
 class CreateApiDocsViewCommand extends Command
@@ -360,7 +360,7 @@ class CreateApiDocsViewCommand extends Command
     /**
      * Build the model class with the given name.
      *
-     * @param Animus\CodeGenerator\Models\Resource $resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $destenationFile
      *
      * @return bool
@@ -409,7 +409,7 @@ class CreateApiDocsViewCommand extends Command
     /**
      * Get a view ready label accessor.
      *
-     * @param  Animus\CodeGenerator\Model\Label $label
+     * @param  AnimusCoop\CrudGenerator\Model\Label $label
      *
      * @return string
      */

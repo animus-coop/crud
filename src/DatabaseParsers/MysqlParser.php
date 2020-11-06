@@ -1,15 +1,15 @@
 <?php
-namespace Animus\CodeGenerator\DatabaseParsers;
+namespace AnimusCoop\CrudGenerator\DatabaseParsers;
 
 use App;
-use Animus\CodeGenerator\Models\ForeignConstraint;
-use Animus\CodeGenerator\Models\ForeignRelationship;
-use Animus\CodeGenerator\Models\Index;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\FieldTransformer;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\LanguageTrait;
-use Animus\CodeGenerator\Traits\ModelTrait;
+use AnimusCoop\CrudGenerator\Models\ForeignConstraint;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationship;
+use AnimusCoop\CrudGenerator\Models\Index;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\FieldTransformer;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Traits\ModelTrait;
 use DB;
 use Exception;
 
@@ -129,7 +129,7 @@ class MysqlParser extends ParserBase
     /**
      * Get all available relations
      *
-     * @return array of Animus\CodeGenerator\Models\ForeignRelationship;
+     * @return array of AnimusCoop\CrudGenerator\Models\ForeignRelationship;
      */
     protected function getRelations()
     {
@@ -185,7 +185,7 @@ class MysqlParser extends ParserBase
     /**
      * Get a corresponding relation to a given table name, foreign column and local column.
      *
-     * @return Animus\CodeGenerator\Models\ForeignRelationship
+     * @return AnimusCoop\CrudGenerator\Models\ForeignRelationship
      */
     protected function getRealtion($foreignTableName, $foreignColumn, $localColumn, $selfReferences)
     {
@@ -223,7 +223,7 @@ class MysqlParser extends ParserBase
     /**
      * Get all available indexed
      *
-     * @return array of Animus\CodeGenerator\Models\Index;
+     * @return array of AnimusCoop\CrudGenerator\Models\Index;
      */
     protected function getIndexes()
     {
@@ -245,7 +245,7 @@ class MysqlParser extends ParserBase
      *
      * @param object $column
      *
-     * @return Animus\CodeGenerator\Model\Field;
+     * @return AnimusCoop\CrudGenerator\Model\Field;
      */
     protected function getTransfredFields(array $columns)
     {
@@ -349,7 +349,7 @@ class MysqlParser extends ParserBase
      *
      * @param string $name
      *
-     * @return null || Animus\CodeGenerator\Models\ForeignConstraint
+     * @return null || AnimusCoop\CrudGenerator\Models\ForeignConstraint
      */
     protected function getForeignConstraint($name)
     {
@@ -373,7 +373,7 @@ class MysqlParser extends ParserBase
     /**
      * Set the options for a given field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $type
      *
      * @return array

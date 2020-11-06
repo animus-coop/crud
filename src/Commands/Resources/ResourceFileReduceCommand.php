@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Resources;
+namespace AnimusCoop\CrudGenerator\Commands\Resources;
 
-use Animus\CodeGenerator\Commands\Bases\ResourceFileCommandBase;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Commands\Bases\ResourceFileCommandBase;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 
 class ResourceFileReduceCommand extends ResourceFileCommandBase
 {
@@ -88,7 +88,7 @@ class ResourceFileReduceCommand extends ResourceFileCommandBase
     /**
      * Reduces the fields from a given resource.
      *
-     * @param Animus\CodeGenerator\Models\Resource &$resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource &$resource
      * @param array $$fieldNames
      *
      * @return mixed
@@ -114,7 +114,7 @@ class ResourceFileReduceCommand extends ResourceFileCommandBase
     /**
      * Reduces the indexes from a given resource.
      *
-     * @param Animus\CodeGenerator\Models\Resource &$resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource &$resource
      * @param array $indexNames
      *
      * @return mixed
@@ -142,7 +142,7 @@ class ResourceFileReduceCommand extends ResourceFileCommandBase
     /**
      * Reduces the relations from a given resource.
      *
-     * @param Animus\CodeGenerator\Models\Resource &$resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource &$resource
      * @param array $relationNames
      *
      * @return mixed

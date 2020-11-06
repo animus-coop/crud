@@ -1,13 +1,13 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Resources;
+namespace AnimusCoop\CrudGenerator\Commands\Resources;
 
-use Animus\CodeGenerator\Commands\Bases\ResourceFileCommandBase;
-use Animus\CodeGenerator\Models\ForeignRelationship;
-use Animus\CodeGenerator\Models\Index;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Commands\Bases\ResourceFileCommandBase;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationship;
+use AnimusCoop\CrudGenerator\Models\Index;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
 
 class ResourceFileRefreshCommand extends ResourceFileCommandBase
 {

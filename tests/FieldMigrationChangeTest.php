@@ -6,11 +6,11 @@
  * Time: 1:28 AM
  */
 
-namespace Animus\CodeGenerator\Tests;
+namespace AnimusCoop\CrudGenerator\Tests;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\FieldMigrationChange;
-use Animus\CodeGenerator\Models\ForeignConstraint;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\FieldMigrationChange;
+use AnimusCoop\CrudGenerator\Models\ForeignConstraint;
 
 class FieldMigrationChangeTest extends TestCase
 {

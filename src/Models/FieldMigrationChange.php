@@ -1,31 +1,31 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Models\Bases\MigrationChangeBase;
-use Animus\CodeGenerator\Support\Contracts\ChangeDetector;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Models\Bases\MigrationChangeBase;
+use AnimusCoop\CrudGenerator\Support\Contracts\ChangeDetector;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
 
 class FieldMigrationChange extends MigrationChangeBase implements JsonWriter, ChangeDetector
 {
     /**
      * The field to be deleted or added
      *
-     * @var Animus\CodeGenerator\Models\Field
+     * @var AnimusCoop\CrudGenerator\Models\Field
      */
     public $field;
 
     /**
      * The field to be changed from
      *
-     * @var Animus\CodeGenerator\Models\Field
+     * @var AnimusCoop\CrudGenerator\Models\Field
      */
     public $fromField;
 
     /**
      * The field to be changed to
      *
-     * @var Animus\CodeGenerator\Models\Field
+     * @var AnimusCoop\CrudGenerator\Models\Field
      */
     public $toField;
 
@@ -95,9 +95,9 @@ class FieldMigrationChange extends MigrationChangeBase implements JsonWriter, Ch
     /**
      * Get new migration change from the given field
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
-     * @return Animus\CodeGenerator\Models\FieldMigrationChange
+     * @return AnimusCoop\CrudGenerator\Models\FieldMigrationChange
      */
     public static function getAdded(Field $field)
     {
@@ -111,9 +111,9 @@ class FieldMigrationChange extends MigrationChangeBase implements JsonWriter, Ch
     /**
      * Get new migration change from the given field
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
-     * @return Animus\CodeGenerator\Models\FieldMigrationChange
+     * @return AnimusCoop\CrudGenerator\Models\FieldMigrationChange
      */
     public static function getDeleted(Field $field)
     {
@@ -127,10 +127,10 @@ class FieldMigrationChange extends MigrationChangeBase implements JsonWriter, Ch
     /**
      * Get the migration change after comparing two given fields
      *
-     * @param Animus\CodeGenerator\Models\Field $fieldA
-     * @param Animus\CodeGenerator\Models\Field $fieldB
+     * @param AnimusCoop\CrudGenerator\Models\Field $fieldA
+     * @param AnimusCoop\CrudGenerator\Models\Field $fieldB
      *
-     * @return Animus\CodeGenerator\Models\FieldMigrationChange
+     * @return AnimusCoop\CrudGenerator\Models\FieldMigrationChange
      */
     public static function compare(Field $fieldA, Field $fieldB)
     {

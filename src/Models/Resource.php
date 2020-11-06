@@ -1,18 +1,18 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Models\ForeignRelationship;
-use Animus\CodeGenerator\Models\Index;
-use Animus\CodeGenerator\Models\Relation;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
-use Animus\CodeGenerator\Support\FieldTransformer;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
-use Animus\CodeGenerator\Traits\LabelTransformerTrait;
+use AnimusCoop\CrudGenerator\Models\ForeignRelationship;
+use AnimusCoop\CrudGenerator\Models\Index;
+use AnimusCoop\CrudGenerator\Models\Relation;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Support\FieldTransformer;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\LabelTransformerTrait;
 use Exception;
 use File;
 
@@ -225,7 +225,7 @@ class Resource implements JsonWriter
     /**
      * Get the first header field if available
      *
-     * @return min (null | Animus\CodeGenerator\Models\Field)
+     * @return min (null | AnimusCoop\CrudGenerator\Models\Field)
      */
     public function getHeaderField()
     {
@@ -241,7 +241,7 @@ class Resource implements JsonWriter
     /**
      * Get the first primary field if available
      *
-     * @return mix (null | Animus\CodeGenerator\Models\Field)
+     * @return mix (null | AnimusCoop\CrudGenerator\Models\Field)
      */
     public function getPrimaryField()
     {
@@ -543,7 +543,7 @@ class Resource implements JsonWriter
      * @param string $localeGroup
      * @param array $languages
      *
-     * @return Animus\CodeGenerator\Models\Resource
+     * @return AnimusCoop\CrudGenerator\Models\Resource
      */
     public static function fromFile($filename, $localeGroup, array $languages = [])
     {
@@ -559,7 +559,7 @@ class Resource implements JsonWriter
      * @param string $localeGroup
      * @param array $languages
      *
-     * @return Animus\CodeGenerator\Models\Resource
+     * @return AnimusCoop\CrudGenerator\Models\Resource
      */
     public static function fromJson($json, $localeGroup, array $languages = [])
     {
@@ -585,7 +585,7 @@ class Resource implements JsonWriter
      * @param string $localeGroup
      * @param array $languages
      *
-     * @return Animus\CodeGenerator\Models\Resource
+     * @return AnimusCoop\CrudGenerator\Models\Resource
      */
     public static function fromArray(array $properties, $localeGroup, array $languages = [])
     {

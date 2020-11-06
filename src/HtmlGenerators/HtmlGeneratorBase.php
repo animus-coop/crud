@@ -1,12 +1,12 @@
 <?php
 
-namespace Animus\CodeGenerator\HtmlGenerators;
+namespace AnimusCoop\CrudGenerator\HtmlGenerators;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Models\Label;
-use Animus\CodeGenerator\Support\ValidationParser;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Models\Label;
+use AnimusCoop\CrudGenerator\Support\ValidationParser;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
 use Exception;
 
 abstract class HtmlGeneratorBase
@@ -37,7 +37,7 @@ abstract class HtmlGeneratorBase
     /**
      * The view Label generator.
      *
-     * @var Animus\CodeGenerator\Support\ViewLabelsGenerator
+     * @var AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator
      */
     protected $viewLabels;
 
@@ -179,7 +179,7 @@ abstract class HtmlGeneratorBase
     /**
      * Replaces field's common templates
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ abstract class HtmlGeneratorBase
     /**
      * Gets a value accessor for the field.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $view
      *
      * @return string
@@ -539,7 +539,7 @@ abstract class HtmlGeneratorBase
     /**
      * Gets the selected value for a menu.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return string
      */
@@ -733,7 +733,7 @@ abstract class HtmlGeneratorBase
     /**
      * Creates html label from a given field
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return string
      */
@@ -750,7 +750,7 @@ abstract class HtmlGeneratorBase
      * Creates html label.
      *
      * @param string $name
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      *
      * @return string
      */
@@ -813,7 +813,7 @@ abstract class HtmlGeneratorBase
     /**
      * Gets title in trans() method.
      *
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      * @param bool $raw
      *
      * @return string
@@ -828,7 +828,7 @@ abstract class HtmlGeneratorBase
     /**
      * Gets title to display from a given label.
      *
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      * @param bool $raw
      *
      * @return $this
@@ -1086,7 +1086,7 @@ abstract class HtmlGeneratorBase
      * Replace the CssClass fo the given stub.
      *
      * @param string $stub
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      * @param string $class
      *
      * @return $this
@@ -1102,7 +1102,7 @@ abstract class HtmlGeneratorBase
      * Replace the fieldTitle fo the given stub.
      *
      * @param string $stub
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      * @param string $fieldTitle
      *
      * @return $this
@@ -1207,7 +1207,7 @@ abstract class HtmlGeneratorBase
     /**
      * It gets converts an array to a stringbase array for the views.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      *
      * @return string
      */
@@ -1261,7 +1261,7 @@ abstract class HtmlGeneratorBase
     /**
      * Get the placeholder attribute.
      *
-     * @param Animus\CodeGenerator\Models\Label $placeholder
+     * @param AnimusCoop\CrudGenerator\Models\Label $placeholder
      *
      * @return string
      */
@@ -1270,7 +1270,7 @@ abstract class HtmlGeneratorBase
     /**
      * Get the placeholder attribute for a menu.
      *
-     * @param Animus\CodeGenerator\Models\Label $placeholder
+     * @param AnimusCoop\CrudGenerator\Models\Label $placeholder
      * @param string $name
      *
      * @return string
@@ -1289,7 +1289,7 @@ abstract class HtmlGeneratorBase
     /**
      * Gets a plain title from a given label.
      *
-     * @param Animus\CodeGenerator\Models\Label $label
+     * @param AnimusCoop\CrudGenerator\Models\Label $label
      * @param bool $raw
      *
      * @return string
@@ -1362,7 +1362,7 @@ abstract class HtmlGeneratorBase
     /**
      * Gets an instance of ViewLabelsGenerator
      *
-     * @return Animus\CodeGenerator\Support\ViewLabelsGenerator
+     * @return AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator
      */
     abstract protected function getViewLabelsGenerator();
 }

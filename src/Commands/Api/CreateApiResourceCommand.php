@@ -1,15 +1,15 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Api;
+namespace AnimusCoop\CrudGenerator\Commands\Api;
 
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
-use Animus\CodeGenerator\Traits\ApiResourceTrait;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
-use Animus\CodeGenerator\Traits\ModelTrait;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\Traits\ApiResourceTrait;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\ModelTrait;
 use Illuminate\Console\Command;
 
 class CreateApiResourceCommand extends Command
@@ -117,7 +117,7 @@ class CreateApiResourceCommand extends Command
     /**
      * Checks for basic errors
      *
-     * @param  Animus\CodeGenerator\Models\Resource $resource
+     * @param  AnimusCoop\CrudGenerator\Models\Resource $resource
      * @param string $destenationFile
      * @param bool $isCollection
      *

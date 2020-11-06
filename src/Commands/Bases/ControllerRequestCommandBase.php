@@ -1,14 +1,14 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Bases;
+namespace AnimusCoop\CrudGenerator\Commands\Bases;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
 use Illuminate\Console\Command;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 class ControllerRequestCommandBase extends Command
 {
@@ -83,7 +83,7 @@ class ControllerRequestCommandBase extends Command
     /**
      * Gets laravel ready field validation format for a given field
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @param string $customRules
      *
      * @return string

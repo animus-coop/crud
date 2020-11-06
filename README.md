@@ -57,7 +57,7 @@ For full documentation and live demo please visit <a href="https://animus.com/an
 
 	```
 	if ($this->app->runningInConsole()) {
-	    $this->app->register('Animus\CodeGenerator\CodeGeneratorServiceProvider');
+	    $this->app->register('AnimusCoop\CrudGenerator\CodeGeneratorServiceProvider');
 	}
 	```
 

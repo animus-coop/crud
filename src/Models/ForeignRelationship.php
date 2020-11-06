@@ -1,14 +1,14 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Support\Arr;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Contracts\JsonWriter;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\ResourceMapper;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\ModelTrait;
+use AnimusCoop\CrudGenerator\Support\Arr;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Contracts\JsonWriter;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\ResourceMapper;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\ModelTrait;
 use DB;
 use Exception;
 use File;
@@ -356,7 +356,7 @@ class ForeignRelationship implements JsonWriter
     /**
      * Gets the foreign model fields from resource file
      *
-     * @return mix (null | Animus\CodeGenerator\Models\Resource)
+     * @return mix (null | AnimusCoop\CrudGenerator\Models\Resource)
      */
     protected function getForeignResource()
     {
@@ -426,7 +426,7 @@ class ForeignRelationship implements JsonWriter
      * @param array $options
      * @throws Exception
      *
-     * @return mix (null | Animus\CodeGenerator\Model\ForeignRelationship)
+     * @return mix (null | AnimusCoop\CrudGenerator\Model\ForeignRelationship)
      */
     public static function get(array $options)
     {
@@ -472,7 +472,7 @@ class ForeignRelationship implements JsonWriter
      *
      * @param string $rawRelation
      *
-     * @return null | Animus\CodeGenerator\Model\ForeignRelationship
+     * @return null | AnimusCoop\CrudGenerator\Model\ForeignRelationship
      */
     public static function fromString($rawRelation)
     {
@@ -515,7 +515,7 @@ class ForeignRelationship implements JsonWriter
      * @param string $fieldName
      * @param string $modelPath
      *
-     * @return null | Animus\CodeGenerator\Model\ForeignRelationship
+     * @return null | AnimusCoop\CrudGenerator\Model\ForeignRelationship
      */
     public static function predict($fieldName, $modelPath)
     {

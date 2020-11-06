@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Views;
+namespace AnimusCoop\CrudGenerator\Commands\Views;
 
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
 use Exception;
 use File;
 use Illuminate\Console\Command;

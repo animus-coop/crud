@@ -1,17 +1,17 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Bases;
+namespace AnimusCoop\CrudGenerator\Commands\Bases;
 
-use Animus\CodeGenerator\HtmlGenerators\LaravelCollectiveHtml;
-use Animus\CodeGenerator\HtmlGenerators\StandardHtml;
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Models\ViewInput;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
-use Animus\CodeGenerator\Support\ViewLabelsGenerator;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\HtmlGenerators\LaravelCollectiveHtml;
+use AnimusCoop\CrudGenerator\HtmlGenerators\StandardHtml;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Models\ViewInput;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Support\ViewLabelsGenerator;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
 use Illuminate\Console\Command;
 
 abstract class ViewsCommandBase extends Command
@@ -134,7 +134,7 @@ abstract class ViewsCommandBase extends Command
      * It Replaces the primaryKey, modelNames, routeNames in a given stub
      *
      * @param string $stub
-     * @param Animus\CodeGenerator\Models\ViewInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ViewInput $input
      *
      * @return $this
      */
@@ -158,7 +158,7 @@ abstract class ViewsCommandBase extends Command
      *
      * @param string $file
      * @param bool $force
-     * @param Animus\CodeGenerator\Models\Resource
+     * @param AnimusCoop\CrudGenerator\Models\Resource
      *
      * @return bool
      */
@@ -401,7 +401,7 @@ abstract class ViewsCommandBase extends Command
      * @param string $modelName
      * @param string $template
      *
-     * @return Animus\CodeGenerator\HtmlGenerators\HtmlGeneratorBase
+     * @return AnimusCoop\CrudGenerator\HtmlGenerators\HtmlGeneratorBase
      */
     protected function getHtmlGenerator(array $fields, $modelName, $template)
     {

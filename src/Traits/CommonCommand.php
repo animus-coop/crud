@@ -1,11 +1,11 @@
 <?php
 
-namespace Animus\CodeGenerator\Traits;
+namespace AnimusCoop\CrudGenerator\Traits;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
 use Exception;
 use File;
 
@@ -429,7 +429,7 @@ trait CommonCommand
      *
      * @param array $fields
      *
-     * @return Animus\CodeGenerator\Models\Field
+     * @return AnimusCoop\CrudGenerator\Models\Field
      */
     protected function getPrimaryField(array $fields)
     {
@@ -446,7 +446,7 @@ trait CommonCommand
      * Determine the field to be used for header from the givin fields.
      *
      * @param array $fields
-     * @return Animus\CodeGenerator\Models\Field || null
+     * @return AnimusCoop\CrudGenerator\Models\Field || null
      */
     protected function getHeaderField(array $fields)
     {

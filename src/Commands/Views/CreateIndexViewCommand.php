@@ -1,9 +1,9 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Views;
+namespace AnimusCoop\CrudGenerator\Commands\Views;
 
-use Animus\CodeGenerator\Commands\Bases\ViewsCommandBase;
-use Animus\CodeGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Commands\Bases\ViewsCommandBase;
+use AnimusCoop\CrudGenerator\Models\Resource;
 
 class CreateIndexViewCommand extends ViewsCommandBase
 {

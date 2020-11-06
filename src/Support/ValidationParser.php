@@ -1,6 +1,6 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
 class ValidationParser
 {

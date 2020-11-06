@@ -1,12 +1,12 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Framework;
+namespace AnimusCoop\CrudGenerator\Commands\Framework;
 
-use Animus\CodeGenerator\Models\Bases\ScaffoldInputBase;
-use Animus\CodeGenerator\Models\ScaffoldInput;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Helpers;
-use Animus\CodeGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Models\Bases\ScaffoldInputBase;
+use AnimusCoop\CrudGenerator\Models\ScaffoldInput;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
 use Exception;
 use Illuminate\Console\Command;
 
@@ -122,9 +122,9 @@ class CreateMappedResourcesCommand extends Command
      * Gets valid input collection
      *
      * @param array $object
-     * @param Animus\CodeGenerator\Models\ResourceInput $input
+     * @param AnimusCoop\CrudGenerator\Models\ResourceInput $input
      *
-     * @return array of Animus\CodeGenerator\Models\ScaffoldInput
+     * @return array of AnimusCoop\CrudGenerator\Models\ScaffoldInput
      */
     protected function getValidInputs(array $objects, ScaffoldInput $originalInput)
     {
@@ -245,7 +245,7 @@ class CreateMappedResourcesCommand extends Command
     /**
      * Gets a clean user inputs.
      *
-     * @return Animus\CodeGenerator\Models\ScaffoldInput
+     * @return AnimusCoop\CrudGenerator\Models\ScaffoldInput
      */
     protected function getCommandInput()
     {

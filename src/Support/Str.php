@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
-use Animus\CodeGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Config;
 use Illuminate\Support\Str as LaravelStr;
 
 class Str extends LaravelStr

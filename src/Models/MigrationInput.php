@@ -1,8 +1,8 @@
 <?php
 
-namespace Animus\CodeGenerator\Models;
+namespace AnimusCoop\CrudGenerator\Models;
 
-use Animus\CodeGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Helpers;
 
 class MigrationInput
 {

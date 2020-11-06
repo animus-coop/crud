@@ -6,7 +6,7 @@
  * Time: 3:20 AM
  */
 
-namespace Animus\CodeGenerator\Tests;
+namespace AnimusCoop\CrudGenerator\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
@@ -14,7 +14,7 @@ class TestCase extends BaseTestCase
 {
     protected function getPackageProviders($app)
     {
-        return ['Animus\CodeGenerator\CodeGeneratorServiceProvider'];
+        return ['AnimusCoop\CrudGenerator\CodeGeneratorServiceProvider'];
     }
 
     /**

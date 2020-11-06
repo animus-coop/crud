@@ -1,13 +1,13 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
 use App;
-use Animus\CodeGenerator\Models\Label;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Traits\CommonCommand;
-use Animus\CodeGenerator\Traits\GeneratorReplacers;
-use Animus\CodeGenerator\Traits\LanguageTrait;
+use AnimusCoop\CrudGenerator\Models\Label;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
+use AnimusCoop\CrudGenerator\Traits\LanguageTrait;
 use Exception;
 
 class ViewLabelsGenerator
@@ -132,7 +132,7 @@ class ViewLabelsGenerator
      * @param bool $isPlain
      * @param string $lang
      *
-     * @return Animus\CodeGenerator\Models\Label
+     * @return AnimusCoop\CrudGenerator\Models\Label
      */
     protected function makeModelLabel($key, array $properties, $isPlain, $lang)
     {

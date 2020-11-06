@@ -1,10 +1,10 @@
 <?php
 
-namespace Animus\CodeGenerator\Commands\Bases;
+namespace AnimusCoop\CrudGenerator\Commands\Bases;
 
-use Animus\CodeGenerator\Models\Resource;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Traits\CommonCommand;
+use AnimusCoop\CrudGenerator\Models\Resource;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Traits\CommonCommand;
 use Illuminate\Console\Command;
 
 class ResourceFileCommandBase extends Command
@@ -17,7 +17,7 @@ class ResourceFileCommandBase extends Command
      * @param string $file
      * @param array $languages
      *
-     * @return Animus\CodeGenerator\Models\Resource
+     * @return AnimusCoop\CrudGenerator\Models\Resource
      */
     protected function getResources($file, array $languages = [])
     {

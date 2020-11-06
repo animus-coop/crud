@@ -1,10 +1,10 @@
 <?php
 
-namespace Animus\CodeGenerator\Support;
+namespace AnimusCoop\CrudGenerator\Support;
 
-use Animus\CodeGenerator\Models\Field;
-use Animus\CodeGenerator\Support\Config;
-use Animus\CodeGenerator\Support\Str;
+use AnimusCoop\CrudGenerator\Models\Field;
+use AnimusCoop\CrudGenerator\Support\Config;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 class FieldsOptimizer
 {
@@ -37,7 +37,7 @@ class FieldsOptimizer
     /**
      * Gets the optimized fields.
      *
-     * @return Animus\CodeGenerator\Models\Field
+     * @return AnimusCoop\CrudGenerator\Models\Field
      */
     public function getFields()
     {
@@ -68,7 +68,7 @@ class FieldsOptimizer
     /**
      * Adds field to the fields collection.
      *
-     * @param Animus\CodeGenerator\Model\Field $field
+     * @param AnimusCoop\CrudGenerator\Model\Field $field
      *
      * @return void
      */
@@ -107,7 +107,7 @@ class FieldsOptimizer
     /**
      * given a mappers collection, it'll update the the field by making one as primary title
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @return bool
      */
     protected function assignPrimaryTitle(array &$mappers)
@@ -138,7 +138,7 @@ class FieldsOptimizer
     /**
      * It checks if a given field is a primary or not.
      *
-     * @param Animus\CodeGenerator\Models\Field $field
+     * @param AnimusCoop\CrudGenerator\Models\Field $field
      * @return bool
      */
     protected function isPrimaryHeader(Field $field)
