@@ -358,7 +358,7 @@ class CreateModelCommand extends Command
      */
     protected function getCommandInput()
     {
-        $modelName = Str::camel(trim($this->argument('model-name')));
+        $modelName = ucfirst(Str::camel(trim($this->argument('model-name'))));
         $table = trim($this->option('table-name')) ?: Helpers::makeTableName($modelName);
         $primaryKey = trim($this->option('primary-key'));
         $useSoftDelete = $this->option('with-soft-delete');
