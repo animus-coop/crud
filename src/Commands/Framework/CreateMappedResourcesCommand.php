@@ -138,7 +138,7 @@ class CreateMappedResourcesCommand extends Command
                 throw new Exception('Each entry in the mapping file must a have value for model-name');
             }
 
-            $input->modelName = trim($object->{'model-name'});
+            $input->modelName = ucfirst(Str::camel(trim($object->{'model-name'})));
             $madeupTableName = Helpers::makeTableName($input->modelName);
             $controllerName = Helpers::makeControllerName($input->modelName);
             $input->resourceFile = $this->getValue($object, 'resource-file', Helpers::makeJsonFileName($input->modelName));
