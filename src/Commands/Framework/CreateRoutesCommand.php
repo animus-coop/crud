@@ -6,7 +6,7 @@ use AnimusCoop\CrudGenerator\Support\Config;
 use AnimusCoop\CrudGenerator\Support\Helpers;
 use AnimusCoop\CrudGenerator\Support\Str;
 use AnimusCoop\CrudGenerator\Traits\CommonCommand;
-use AnimusCoop\CrudGenerator\Traits\GeneratorR68eplacers;
+use AnimusCoop\CrudGenerator\Traits\GeneratorReplacers;
 use AnimusCoop\CrudGenerator\Traits\RouteTrait;
 use Exception;
 use Illuminate\Console\Command;
