@@ -36,7 +36,7 @@
 
                 <form class="well" action="{{ route('[% index_route_name %]') }}" method="post">
                     <div class="row">
-                        {{ [% filter_rows %] }}
+                         [% filter_rows %] 
 
 
                         <div class="col-md-12">
