@@ -31,6 +31,10 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         $this->publishes([
             $dir . 'templates/default-collective' => $this->codeGeneratorBase('templates/default-collective'),
         ], 'default-collective-template');
+
+        $this->publishes([
+            $dir . '/assets' => $this->codeGeneratorBase('cms/'),
+        ], 'default-collective-template');
     }
 
     /**
