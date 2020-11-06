@@ -6,6 +6,7 @@ use AnimusCoop\CrudGenerator\Commands\Bases\ControllerCommandBase;
 use AnimusCoop\CrudGenerator\Models\Resource;
 use AnimusCoop\CrudGenerator\Support\Config;
 use AnimusCoop\CrudGenerator\Support\Helpers;
+use AnimusCoop\CrudGenerator\Support\Str;
 
 class CreateControllerCommand extends ControllerCommandBase
 {
