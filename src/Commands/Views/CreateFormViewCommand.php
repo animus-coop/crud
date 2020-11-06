@@ -57,7 +57,8 @@ class CreateFormViewCommand extends ViewsCommandBase
             $htmlCreator = $this->getHtmlGenerator($resources->fields, $input->modelName, $this->getTemplateName());
             $headers = $this->getHeaderFieldAccessor($resources->fields, $input->modelName);
 
-            $this->createBaseLayout();
+            //Base layout creation
+            $this->createExtraLayouts('layouts/app.blade.php',$this->getTemplateName(), 'Base layout');
 
             $this->createLanguageFile($input->languageFileName, $input->resourceFile, $input->modelName)
                 ->replaceCommonTemplates($stub, $input, $resources->fields)
@@ -68,15 +69,14 @@ class CreateFormViewCommand extends ViewsCommandBase
         }
     }
 
-    protected function createBaseLayout() {
-        $baseLayoutPath = Config::getViewsPath() . 'layouts/app.blade.php';
-        if(!File::exists($baseLayoutPath)) {
-            $stub = $this->getStubContent('layout', $this->getTemplateName());
-
-            $this->createFile($baseLayoutPath, $stub)->info('Base layout created.');
+    protected function createExtraLayouts($layoutPath, $templateName, $message) {
+        $layoutPath = Config::getViewsPath() . $layoutPath;
+        if(!File::exists($layoutPath)) {
+            $stub = $this->getStubContent('layout', $templateName);
+            $this->createFile($layoutPath, $stub)->info($message . ' created.');
         }
         else {
-            $this->error('Base layout already exists');
+            $this->error($message . ' already exists');
         }
     }
 
