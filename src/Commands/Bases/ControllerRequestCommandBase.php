@@ -447,6 +447,7 @@ EOF;
      */
     protected function replaceUseCommandPlaceholder(&$stub, $commands)
     {
+        $commands = str_replace('App\Http\Controllers\admin\Controller', 'App\Http\Controllers\Controller', $commands);
         return $this->replaceTemplate('use_command_placeholder', $commands, $stub);
     }
 
