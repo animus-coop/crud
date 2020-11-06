@@ -23,8 +23,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Animus\\CodeGenerator\\": "src/",
-            "Animus\\CodeGenerator\\Tests\\": "tests/"
+            "AnimusCoop\\CrudGenerator\\": "src/",
+            "AnimusCoop\\CrudGenerator\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Animus\\CodeGenerator\\CodeGeneratorServiceProvider"
+                "AnimusCoop\\CrudGenerator\\CodeGeneratorServiceProvider"
             ]
         }
     }
