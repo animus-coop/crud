@@ -5,6 +5,7 @@ namespace AnimusCoop\CrudGenerator\Commands\Views;
 use AnimusCoop\CrudGenerator\Commands\Bases\ViewsCommandBase;
 use AnimusCoop\CrudGenerator\Models\Resource;
 use AnimusCoop\CrudGenerator\Support\Config;
+use File;
 
 class CreateFormViewCommand extends ViewsCommandBase
 {
@@ -68,11 +69,15 @@ class CreateFormViewCommand extends ViewsCommandBase
     }
 
     protected function createBaseLayout() {
-        $destenationFile = Config::getViewsPath() . 'layouts/app.blade.php';
-        $stub = $this->getStubContent('layout', $this->getTemplateName());
+        $baseLayoutPath = Config::getViewsPath() . 'layouts/app.blade.php';
+        if(!File::exists($baseLayoutPath)) {
+            $stub = $this->getStubContent('layout', $this->getTemplateName());
 
-        $this->createFile($destenationFile, $stub)
-            ->info('Base layout created.');
+            $this->createFile($baseLayoutPath, $stub)->info('Base layout created.');
+        }
+        else {
+            $this->error('Base layout already exists');
+        }
     }
 
     /**
