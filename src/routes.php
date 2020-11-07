@@ -2,11 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
-    Route::get('admin', function () {
-        return view('crud::admin.dashboard.index');
-    });
+Route::mixin(new \Laravel\Ui\AuthRouteMethods());
+Route::auth(['verify' => true]);
 
+Route::get('admin', function () {
+    return view('crud::admin.dashboard.index');
+});
+
+Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     Route::get('users/roles', 'UserController@roles')->name('users.roles');
     Route::resource('users', 'UserController', [
         'names' => [
@@ -15,10 +18,10 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     ]);
 });
 
-Route::middleware('auth')->get('logout', function() {
-    Auth::logout();
-    return redirect(route('login'))->withInfo('You have successfully logged out!');
-})->name('logout');
+//Route::middleware('auth')->get('logout', function() {
+//    Auth::logout();
+//    return redirect(route('login'))->withInfo('You have successfully logged out!');
+//})->name('logout');
 
 Auth::routes(['verify' => true]);
 
