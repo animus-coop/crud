@@ -33,13 +33,13 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         ], 'default-collective-template');
 
         $this->publishes([
-            __DIR__.'assets' => public_path('cms'),
+            __DIR__.'/assets' => public_path('cms'),
         ], 'public');
 
-        $this->loadViewsFrom(__DIR__.'/views', null);
+        $this->loadViewsFrom(__DIR__.'/Views', null);
         
         $this->publishes([
-            __DIR__.'/views' => resource_path('views/vendor/crud-generator'),
+            __DIR__.'/Views' => resource_path('views/vendor/crud-generator'),
         ]);
     }
 
