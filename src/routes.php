@@ -7,7 +7,7 @@ Route::auth(['verify' => true]);
 
 Route::get('admin', function () {
     return view('crud::admin.dashboard.index');
-});
+})->name('admin.dashboard');
 
 Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     Route::get('users/roles', 'UserController@roles')->name('users.roles');
