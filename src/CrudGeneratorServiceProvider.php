@@ -33,10 +33,6 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         ]);
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');
-
-        Route::get('admin', function () {
-            return view('crud-generator::admin.dashboard.index');
-        });
     }
 
     /**
