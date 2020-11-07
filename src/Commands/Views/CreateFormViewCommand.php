@@ -58,7 +58,7 @@ class CreateFormViewCommand extends ViewsCommandBase
             $headers = $this->getHeaderFieldAccessor($resources->fields, $input->modelName);
 
             //Base layout creation
-            $this->createExtraLayouts('layouts/app.blade.php',$this->getTemplateName(), 'Base layout');
+            // $this->createExtraLayouts('layouts/app.blade.php',$this->getTemplateName(), 'Base layout');
 
             $this->createLanguageFile($input->languageFileName, $input->resourceFile, $input->modelName)
                 ->replaceCommonTemplates($stub, $input, $resources->fields)
