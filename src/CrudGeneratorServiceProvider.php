@@ -95,6 +95,8 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         }
 
         $this->commands($commands);
+
+        $this->loadViewsFrom(__DIR__.'/views', null);
     }
 
     /**
