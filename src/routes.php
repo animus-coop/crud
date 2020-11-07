@@ -2,12 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('admin', function () {
-    return view('crud::admin.dashboard.index');
-});
-
 Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
-    Route::get('dashboard', 'DashboardController')->name('dashboard');
+    Route::get('admin', function () {
+        return view('crud::admin.dashboard.index');
+    });
 
     Route::get('users/roles', 'UserController@roles')->name('users.roles');
     Route::resource('users', 'UserController', [
