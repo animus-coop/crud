@@ -22,25 +22,21 @@ class CrudGeneratorServiceProvider extends ServiceProvider
             $dir . 'config/animus-crud-generator.php' => config_path('animus-crud-generator.php'),
         ], 'config');
 
-        // publish the default-template
-        $this->publishes([
-            $dir . 'templates/default' => $this->codeGeneratorBase('templates/default'),
-        ], 'default-template');
-
-        // publish the defaultcollective-template
-        $this->publishes([
-            $dir . 'templates/default-collective' => $this->codeGeneratorBase('templates/default-collective'),
-        ], 'default-collective-template');
-
         $this->publishes([
             __DIR__.'/assets' => public_path('cms'),
         ], 'public');
 
-        $this->loadViewsFrom(__DIR__.'/Views', null);
+        $this->loadViewsFrom(__DIR__.'/Views', 'crud');
         
         $this->publishes([
             __DIR__.'/Views' => resource_path('views/vendor/crud-generator'),
         ]);
+
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
+
+        Route::get('admin', function () {
+            return view('crud-generator::admin.dashboard.index');
+        });
     }
 
     /**
