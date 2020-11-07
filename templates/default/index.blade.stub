@@ -94,8 +94,10 @@
                 </div>
             </div>
 
-            <div class="panel-footer">
-                {!! $[% model_name_plural_variable %]->render() !!}
+            <div class="card-footer text-right">
+                {!! $[% model_name_plural_variable %]->links('crud::layouts.pagination') !!}
+
+
             </div>
 
         @endif
