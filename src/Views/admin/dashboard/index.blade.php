@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('crud::layouts.app')
 
 @section('title')
 Dashboard
