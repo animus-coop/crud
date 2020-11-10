@@ -36,11 +36,14 @@
                                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="{{asset('cms/assets/img/avatar/avatar-1.png')}}"
                  class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Hi, Usuario</div>
+                 <div class="d-sm-none d-lg-inline-block">Bienvenido, {{ Auth::user()->name  }}</div>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
 
-            <a href="#" class="dropdown-item has-icon text-danger">
+              <form id="logout" method="POST" action="{{ route('logout') }}">
+                  @csrf
+              </form>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout').submit();" class="dropdown-item has-icon text-danger">
               <i class="fas fa-sign-out-alt"></i> Logout
             </a>
           </div>
@@ -62,12 +65,12 @@
               <span>Dashboard</span>
             </a>
           </li>
-          <li class="{{ Request::route()->getName() == 'admin.users' ? ' active' : '' }}">
+          <!-- <li class="{{ Request::route()->getName() == 'admin.users' ? ' active' : '' }}">
             <a class="nav-link" href="{{ route('admin.users') }}">
               <i class="fa fa-users"></i>
               <span>Users</span>
             </a>
-          </li>
+          </li> -->
         </ul>
 
       </aside>
