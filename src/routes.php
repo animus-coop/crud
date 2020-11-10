@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::auth(['verify' => true]);
-
 Route::get('admin', function () {
     return view('crud::admin.dashboard.index');
 })->name('admin.dashboard')->middleware('auth');
