@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('admin', function () {
+Route::get('/', function () {
     return view('crud::admin.dashboard.index');
 })->name('admin.dashboard')->middleware('auth');
 
