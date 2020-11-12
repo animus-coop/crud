@@ -19,7 +19,7 @@ class CrudGeneratorServiceProvider extends ServiceProvider
 
         // publish the config base file
         $this->publishes([
-            $dir . 'config/animus-crud-generator.php' => config_path('animus-crud-generator.php'),
+            $dir . 'config/default.php' => config_path('rud-generator.php'),
         ], 'config');
 
         $this->publishes([
@@ -34,9 +34,6 @@ class CrudGeneratorServiceProvider extends ServiceProvider
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 
-        $this->publishes([
-            __DIR__.'/../config/default.php' => config_path('crud.php'),
-        ]);
     }
 
     /**
