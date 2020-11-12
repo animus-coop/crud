@@ -243,7 +243,7 @@ abstract class ViewsCommandBase extends Command
      */
     protected function replaceLayoutName(&$stub, $layout)
     {
-        return $this->replaceTemplate('layout_name', "crud::" . $layout, $stub);
+        return $this->replaceTemplate('layout_name', $layout, $stub);
     }
 
     /**

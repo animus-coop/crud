@@ -33,6 +33,10 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         // ]);
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');
+
+        $this->publishes([
+            __DIR__.'/../config/default.php' => config_path('crud.php'),
+        ]);
     }
 
     /**
