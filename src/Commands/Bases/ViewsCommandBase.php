@@ -111,7 +111,7 @@ abstract class ViewsCommandBase extends Command
      */
     protected function getDestinationViewFullname($viewsDirectory, $routesPrefix, $viewName = null)
     {
-        $viewsPath = $this->getFullViewsPath($viewsDirectory, $routesPrefix);
+        $viewsPath = config('animus-crud-generator.views_path_prefix') . '/' . $this->getFullViewsPath($viewsDirectory, $routesPrefix);
 
         $filename = $this->getDestinationViewName($viewName ?: $this->getViewType());
 

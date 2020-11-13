@@ -311,7 +311,7 @@ class CreateRoutesCommand extends Command
      */
     protected function getGroupPrefix($prefix)
     {
-        return empty($prefix) ? '' : sprintf("'prefix' => '%s',", $prefix);
+        return empty($prefix) ? '' : sprintf("'prefix' => '%s',\n    'middleware' => 'auth'", $prefix);
     }
 
     /**
