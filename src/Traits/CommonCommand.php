@@ -237,7 +237,7 @@ trait CommonCommand
     protected function replaceViewNames(&$stub, $viewDirectory, $routesPrefix, array $views = null)
     {
         foreach (($views ?: $this->views) as $view) {
-            $viewName = config('animus-crud-generator.views_path_prefix') . '.' . $this->getDotNotationName($viewDirectory, $routesPrefix, $view);
+            $viewName = config('animus-crud-generator.views_path_prefix') . $this->getDotNotationName($viewDirectory, $routesPrefix, $view);
             $viewTemplate = $this->getViewTemplateName($view);
             $stub = $this->strReplace($viewTemplate, $viewName, $stub);
         }
