@@ -62,7 +62,7 @@ class CreateControllerCommand extends ControllerCommandBase
         $stub = $this->getControllerStub();
 
         return $this->processCommonTasks($input, $resource, $stub)
-            ->replaceViewNames($stub, $input->viewDirectory, $input->prefix)
+            ->replaceViewNames($stub, config('admin-crud-generator.views_path_prefix') . '.' . $input->viewDirectory, $input->prefix)
             ->replaceRouteNames($stub, $this->getModelName(ucfirst(Str::camel($input->modelName))), $input->prefix)
             ->replaceCallAffirm($stub, $this->getCallAffirm($input->withFormRequest))
             ->replaceAffirmMethod($stub, $affirmMethod)

@@ -361,7 +361,7 @@ class CreateControllerCommand extends ControllerCommandBase
         $modelName = ucfirst(\AnimusCoop\CrudGenerator\Support\Str::camel(trim($this->argument('model-name'))));
         $cName = trim($this->option('controller-name'));
         $controllerName = $cName ? str_finish($cName, Config::getControllerNamePostFix()) : Helpers::makeControllerName($modelName);
-        $viewDirectory = config('admin-crud-generator.views_path_prefix') . '.' . $this->option('views-directory');
+        $viewDirectory = $this->option('views-directory');
         $prefix = ($this->option('routes-prefix') == 'default-form') ? Helpers::makeRouteGroup($modelName) : $this->option('routes-prefix');
         $perPage = intval($this->option('models-per-page'));
         $resourceFile = trim($this->option('resource-file')) ?: Helpers::makeJsonFileName($modelName);
