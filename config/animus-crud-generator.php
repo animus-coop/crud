@@ -48,5 +48,5 @@ return [
     |
      */
     'files_upload_path' => 'uploads',
-
+    'views_path_prefix' => 'admin'
 ];
