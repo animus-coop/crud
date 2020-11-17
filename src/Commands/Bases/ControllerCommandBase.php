@@ -450,7 +450,7 @@ abstract class ControllerCommandBase extends ControllerRequestCommandBase
             '$%s = %s::pluck(\'%s\',\'%s\')->all();',
             $collection->getCollectionName(),
             $collection->getForeignModel(),
-            $collection->getField(),
+            'name',
             $collection->getPrimaryKeyForForeignModel()
         );
     }

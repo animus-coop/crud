@@ -49,4 +49,36 @@ return [
      */
     'files_upload_path' => 'uploads',
     'views_path_prefix' => 'admin',
+    'menu'  => [
+        [
+            'group' => 'Dashboard',
+            'items' => [
+                [
+                    'label' => 'Dashboard',
+                    'subitems'  => [
+                        [
+                            'label' => 'Dashboard',
+                            'route' => 'admin.dashboard',
+                            'icon'  => 'fas fa-fire'
+                        ]
+                    ]
+                ],
+                [
+                    'label' => 'General',
+                    'subitems'  => [
+                        [
+                            'label' => 'Profesiones',
+                            'route' => 'profession_type.index',
+                            'icon'  => 'fa fa-users'
+                        ],
+                        [
+                            'label' => 'Usuarios',
+                            'route' => 'user.index',
+                            'icon'  => 'fa fa-users'
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ]
 ];
