@@ -12,6 +12,7 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{asset('cms/assets/css/daterangepicker.css') }}">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{asset('cms/assets/css/style.css')}}">
@@ -111,6 +112,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="{{asset('cms/assets/js/stisla.js')}}"></script>
+<script src="{{asset('cms/assets/js/daterangepicker.js')}}"></script>
 
 <!-- JS Libraies -->
 
