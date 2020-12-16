@@ -63,22 +63,24 @@
           @foreach(config('animus-crud-generator.menu') AS $group)
                 <li class="menu-header">{{$group['group']}}</li>
                  @foreach($group['items'] AS $item)
-                     @if (isset($item['subitems']))
-                        <li class="dropdown active">
-                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>{{ $item['label'] }}</span></a>
-                            <ul class="dropdown-menu" style="display: none;">
-                                @foreach($item['subitems'] AS $subitem)
-                                <li><a class="nav-link" href="{{ route($subitem['route']) }}">{{ $subitem['label'] }}</a></li>
-                                @endforeach
-                            </ul>
+                    @if (isset($item['roles']) && in_array(Auth::user()->roles[0]->id, $item['roles']))
+                        @if (isset($item['subitems']))
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>{{ $item['label'] }}</span></a>
+                                <ul class="dropdown-menu" style="display: none;">
+                                    @foreach($item['subitems'] AS $subitem)
+                                    <li><a class="nav-link" href="{{ route($subitem['route']) }}">{{ $subitem['label'] }}</a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @else
+                        <li class="{{ Request::route()->getName() == $item['route'] ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route($item['route']) }}">
+                            <i class="{{ $item['icon'] }}"></i>
+                            <span>{{ $item['label'] }}</span>
+                            </a>
                         </li>
-                     @else
-                      <li class="{{ Request::route()->getName() == $item['route'] ? ' active' : '' }}">
-                        <a class="nav-link" href="{{ route($item['route']) }}">
-                          <i class="{{ $item['icon'] }}"></i>
-                          <span>{{ $item['label'] }}</span>
-                        </a>
-                      </li>
+                        @endif
                     @endif
                 @endforeach
             @endforeach
