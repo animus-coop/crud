@@ -25,12 +25,11 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/assets' => public_path('cms'),], 'public');
 
-//        $this->loadViewsFrom(__DIR__.'/Views', 'crud');
-//        $this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->loadViewsFrom(__DIR__.'/Views', 'crud');
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         $this->publishes([
              __DIR__.'/Views' => resource_path('views/vendor/crud-generator'),
-             __DIR__.'/routes.php' => resource_path('../routes/web.php'),
          ]);
     }
 
