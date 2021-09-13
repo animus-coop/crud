@@ -8,23 +8,23 @@ return [
             'group' => 'Dashboard',
             'items' => [
                 [
+                    'roles' => [1,2],//admin and another one
                     'label' => 'Dashboard',
                     'subitems'  => [
                         [
                             'label' => 'Dashboard',
                             'route' => 'admin.dashboard',
-                            'roles' => [1,2],//admin and another one
                             'icon'  => 'fas fa-fire'
                         ]
                     ]
                 ],
                 [
                     'label' => 'General',
+                    'roles' => [1],//admin
                     'subitems'  => [
                         [
                             'label' => 'Usuarios',
                             'route' => 'user.index',
-                            'roles' => [1],//only admin
                             'icon'  => 'fa fa-users'
                         ]
                     ]
