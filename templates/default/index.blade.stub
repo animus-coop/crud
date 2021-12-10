@@ -1,4 +1,4 @@
-@extends('crud::layouts.app')
+@extends('admin.layouts.adminlte')
 
 @section('content')
 
@@ -35,62 +35,49 @@
                            </div>
                        </form>
                     </div>
-
-                    <div class="btn-group btn-group-sm pull-right" role="group">
-                          <a href="{{ route('[% create_route_name %]') }}" class="btn btn-success" title="[% create_model %]">
-                                <span class="fas fa-plus" aria-hidden="true"></span>
-                          </a>
-                   </div>
-
                  </div>
 
 
+        <div class="card-body">
+                 <a href="{{ route('admin.[% create_route_name %]' ) }}" class="btn btn-success" title="Create New [% model_name_title %]">
+                     <span class="fas fa-plus" aria-hidden="true"></span>
+                 </a>
+        </div>
         @if(count($[% model_name_plural_variable %]) == 0)
             <div class="card-body">
                 <h4>[% no_models_available %]</h4>
             </div>
         @else
             <div class="card-body">
-                <div class="table-responsive">
-
-                    <table class="table table-striped ">
-                        <thead>
-                        <tr>
-                            [% header_cells %]
-                            <th></th>
-                        </tr>
+                 <div class="card-body">
+                    <table class="table table-striped">
+                        <thead style="background-color: #343a40; color: #fff">
+                            <tr>
+                                <th><input type="checkbox" /></th>
+                                [% header_cells %]
+                                <th>Actions</th>
+                            </tr>
                         </thead>
                         <tbody>
                         @foreach($[% model_name_plural_variable %] as $[% model_name_singular_variable %])
                             <tr>
+                                <td width="1"><input type="checkbox"></td>
                                 [% body_cells %]
-                                <td>
-
-                                    <form method="POST" action="{!! route('[% destroy_route_name %]', $[% model_name_singular_variable %]->[% primary_key %]) !!}" accept-charset="UTF-8">
-                                        <input name="_method" value="DELETE" type="hidden">
-                                        {{ csrf_field() }}
-
+                                <td width="20">
                                         <div class="btn-group btn-group-xs pull-right" role="group">
-                                            <a href="{{ route('[% show_route_name %]', $[% model_name_singular_variable %]->[% primary_key %] ) }}" class="btn btn-info" title="[% show_model %]">
-                                                <span class="fas fa-eye" aria-hidden="true"></span>
-                                            </a>
-                                            <a href="{{ route('[% edit_route_name %]', $[% model_name_singular_variable %]->[% primary_key %] ) }}" class="btn btn-primary" title="[% edit_model %]">
+                                            <a href="{{ route('admin.[% edit_route_name %]', $[% model_name_singular_variable %]->[% primary_key %] ) }}" class="btn btn-primary" title="[% edit_model %]">
                                                 <span class="fas fa-edit" aria-hidden="true"></span>
                                             </a>
 
-                                            <button type="submit" class="btn btn-danger" title="[% delete_model %]" onclick="return confirm(&quot;[% confirm_delete %]&quot;)">
+                                            <button type="submit" class="btn btn-danger" title="[% delete_model %]" onclick="return confirmDelete(event, {{ $[% model_name_singular_variable %]->[% primary_key %] }})">
                                                 <span class="fas fa-trash" aria-hidden="true"></span>
                                             </button>
                                         </div>
-
-                                    </form>
-
                                 </td>
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
-
                 </div>
             </div>
 
@@ -111,4 +98,45 @@
 
 
     </section>
+
 @endsection
+
+@section('js')
+<script>
+     function confirmDelete(ev, id) {
+                ev.preventDefault();
+                    Swal.fire({
+                        title: 'Desea eliminar este elemento?',
+                        showCancelButton: true,
+                        confirmButtonText: 'Delete',
+                    }).then((result) => {
+                        if (result.value) {
+                            $.ajax({
+                                url: '{!! route('admin.[% destroy_route_name %]') !!}' ,
+                                data: { 'id' : id, "_token": "{{ csrf_token() }}",},
+
+                                type: 'DELETE',
+                                success: function(result) {
+                                    if (result.success) {
+                                        location.reload();
+                                    }
+                                    else {
+                                        Swal.fire('Error', '', 'error')
+                                    }
+                                }
+                            });
+                    }
+            });
+            }
+
+    @if(Session::has('success_message'))
+        Swal.fire({
+            position: 'center',
+            type: 'success',
+            title: 'Operación exitosa.',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    @endif
+    </script>
+@stop

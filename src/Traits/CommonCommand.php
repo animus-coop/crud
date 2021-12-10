@@ -419,7 +419,10 @@ trait CommonCommand
      */
     protected function appendContentToFile($file, $content)
     {
-        File::append($file, $content);
+        $currentContent = File::get($file);
+        if (!strpos($currentContent, $content)) {
+            File::append($file, $content);
+        }
 
         return $this;
     }

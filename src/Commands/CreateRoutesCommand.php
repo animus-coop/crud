@@ -58,7 +58,7 @@ class CreateRoutesCommand extends Command
 
         $this->replaceModelName($stub, $input->modelName)
             ->replaceControllerName($stub, $controllnerName)
-            ->replaceRouteNames($stub, $this->getModelName($input->modelName), $input->prefix)
+            ->replaceRouteNames($stub, 'admin.' . $this->getModelName($input->modelName), $input->prefix)
             ->processRoutesGroup($stub, $input->prefix, $input->controllerDirectory)
             ->appendToRoutesFile($stub, $routesFile)
             ->info('The routes were added successfully.');

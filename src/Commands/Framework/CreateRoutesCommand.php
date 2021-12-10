@@ -65,7 +65,7 @@ class CreateRoutesCommand extends Command
         $controllnerName = $this->getControllerName($input->controllerName, $input->controllerDirectory);
 
         $this->replaceModelName($stub, $input->modelName)
-            ->replaceControllerName($stub, 'App\Http\Controllers\admin\\' . $controllnerName)
+            ->replaceControllerName($stub, 'App\Http\Controllers\Admin\\' . $controllnerName)
             ->replaceRouteNames($stub, $this->getModelName($input->modelName), $namePrefix)
             ->processRoutesGroup($stub, $input)
             ->replaceRouteIdClause($stub, $this->getRouteIdClause($input->withoutRouteClause))
@@ -357,7 +357,7 @@ class CreateRoutesCommand extends Command
     {
         if (Helpers::isNewerThanOrEqualTo('5.3')) {
 
-            $file = ($type == 'api') ? 'api' : 'web';
+            $file = ($type == 'api') ? 'api' : 'admin';
 
             return base_path('routes/' . $file . '.php');
         }

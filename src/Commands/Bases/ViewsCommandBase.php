@@ -71,7 +71,7 @@ abstract class ViewsCommandBase extends Command
      */
     protected function getDestinationPath($viewsDirectory)
     {
-        $path = Config::getViewsPath();
+        $path = Config::getViewsPath() . '/admin';
 
         if (!empty($viewsDirectory)) {
             $path .= Helpers::getPathWithSlash($viewsDirectory);
@@ -145,10 +145,10 @@ abstract class ViewsCommandBase extends Command
         $standardLabels = $viewLabels->getLabels();
 
         $this->replaceModelName($stub, $input->modelName)
-            ->replaceRouteNames($stub, $this->getModelName($input->modelName), $input->prefix)
-            ->replaceViewNames($stub, $input->viewsDirectory, $input->prefix)
-            ->replaceLayoutName($stub, $input->layout)
-            ->replaceStandardLabels($stub, $standardLabels);
+             ->replaceRouteNames($stub, $this->getModelName($input->modelName), $input->prefix)
+             ->replaceViewNames($stub, $input->viewsDirectory, $input->prefix)
+             ->replaceLayoutName($stub, $input->layout)
+             ->replaceStandardLabels($stub, $standardLabels);
 
         return $this;
     }

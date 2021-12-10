@@ -15,23 +15,21 @@ class CrudGeneratorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $dir = __DIR__ . '/../';
-
-        // publish the config base file
-        $this->publishes([
-            $dir . 'config/animus-crud-generator.php' => config_path('animus-crud-generator.php'),
-        ], 'config');
-
-        $this->publishes([
-            __DIR__.'/assets' => public_path('cms'),], 'public');
-
-        $this->loadViewsFrom(__DIR__.'/Views', 'crud');
+//        $dir = __DIR__ . '/../';
+//
+//        // publish the config base file
+//        $this->publishes([
+//            $dir . 'config/animus-crud-generator.php' => config_path('animus-crud-generator.php'),
+//        ], 'config');
+//
+//        $this->publishes([
+//            __DIR__.'/assets' => public_path('cms'),], 'public');
+//
+        $this->loadViewsFrom(__DIR__.'/Views', 'crud'); // This is called from templates as crud::layouts.xxx
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         $this->publishes([
-             __DIR__.'/Views' => resource_path('views/vendor/crud-generator'),
-             __DIR__.'/Controllers' => app_path('Http/Controllers/admin/'),
-             __DIR__.'/Views/layouts' => resource_path('views/'),
+             __DIR__.'/Views/auth' => resource_path('views/auth'),
          ]);
     }
 

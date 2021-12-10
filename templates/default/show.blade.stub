@@ -1,4 +1,4 @@
-@extends('crud::layouts.app')
+@extends('adminlte::page')
 
 @section('content')
 

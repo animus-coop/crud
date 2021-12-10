@@ -15,18 +15,18 @@ Route::group([
     'prefix' => 'users',
     'middleware' => ['auth', 'role:admin']
 ], function () {
-    Route::get('/', 'App\Http\Controllers\admin\UserController@index')
+    Route::get('/', 'App\Http\Controllers\Admin\UserController@index')
          ->name('user.index');
-    Route::get('/create', 'App\Http\Controllers\admin\UserController@create')
+    Route::get('/create', 'App\Http\Controllers\Admin\UserController@create')
          ->name('user.create');
-    Route::get('/show/{user}', 'App\Http\Controllers\admin\UserController@show')
+    Route::get('/show/{user}', 'App\Http\Controllers\Admin\UserController@show')
          ->name('user.show')->where('id', '[0-9]+');
-    Route::get('/{user}/edit', 'App\Http\Controllers\admin\UserController@edit')
+    Route::get('/{user}/edit', 'App\Http\Controllers\Admin\UserController@edit')
          ->name('user.edit')->where('id', '[0-9]+');
-    Route::post('/', 'App\Http\Controllers\admin\UserController@store')
+    Route::post('/', 'App\Http\Controllers\Admin\UserController@store')
          ->name('user.store');
-    Route::put('user/{user}', 'App\Http\Controllers\admin\UserController@update')
+    Route::put('user/{user}', 'App\Http\Controllers\Admin\UserController@update')
          ->name('user.update')->where('id', '[0-9]+');
-    Route::delete('/user/{user}', 'App\Http\Controllers\admin\UserController@destroy')
+    Route::delete('/user/{user}', 'App\Http\Controllers\Admin\UserController@destroy')
          ->name('user.destroy')->where('id', '[0-9]+');
 });

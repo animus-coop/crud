@@ -36,6 +36,10 @@ trait GeneratorReplacers
         return $this;
     }
 
+    public function replaceIndexViewName(&$stub, $index) {
+        $this->strReplace('index_view_name', $index, $stub);
+    }
+
     /**
      * It Replaces the templates of the givin $labels
      *

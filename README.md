@@ -61,7 +61,7 @@ Route::get('/', function () {
     return redirect(route('admin.dashboard'));
 });
 
-Route::middleware(['auth:sanctum', 'verified', 'role:admin|professional'])->get('/dashboard', function () {
+Route::middleware(['auth:sanctum', 'verified', 'role:admin|foo'])->get('/dashboard', function () {
     return view('crud::admin.dashboard.index');
 })->name('admin.dashboard');
 ```
